@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Liubov Kudrina](https://up.htmlacademy.ru/htmlcss/20/user/224497).
-* Наставник: `Неизвестно`.
+* Наставник: [Денис Власов](https://up.htmlacademy.ru/htmlcss/20/user/18034).
 
 ---
 
