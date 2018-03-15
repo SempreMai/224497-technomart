@@ -40,8 +40,12 @@
           ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="client-area">
-          <span class="login-link">Войти</span>
-          <span class="registration-link">Регистрация</span>
+          <span class="login-link">
+            <a class="login-link-enter" href="#">Войти</a>
+          </span>
+          <span class="login-link-registration">
+            <a class="login-link-register" href="#">Регистрация</a>
+          </span>
         </div>
       </div>
     </header>
@@ -308,12 +312,34 @@
       <a class="map-popup" href="#">
         <h3 class="visually-hidden">Техномарт на карте</h3>
       </a>
-      <span class="modal-close">x</span>
+      <button class="modal-close">Закрыть карту</button>
     </section>
     <section class="modal modal-write-us">
-      <h2 class="visually-hidden">Напишите нам</h2>
-      <!-- Здесь будет форма-->
-      <span class="modal-close">x</span>
+      <form class="write-us-form" method="get"
+        action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend class="visually-hidden">Напишите нам</legend>
+          <p class="write-us-part-name">
+            <label for="write-us-name">Ваше имя:</label>
+            <input id="write-us-name" type="text" name="your-name" value=""
+             placeholder="Представьтесь, пожалуйста">
+          </p>
+          <p class="write-us-part-email">
+            <label for="write-us-email">Ваш e-mail:</label>
+            <input id="write-us-email" type="text" name="your-email" value=""
+            placeholder="Для отправки ответа">
+          </p>
+          <p class="write-us-part-text">
+            <label for="write-us-text">Текст письма:</label>
+            <input id="write-us-text" type="textarea" name="your-text"
+            rows="" cols="" placeholder="В свободной форме">
+          </p>
+          <p class="write-us-part-send">
+            <button class="button" type="submit">Отправить</button>
+          </p>
+        </fieldset>
+      </form>
+      <button class="modal-close">Закрыть форму "Напишите нам"</button>
     </section>
     <section class="modal modal-cart">
       <h2 class="catalogue-cart">Товар добавлен в корзину</h2>
@@ -321,7 +347,7 @@
         <li><a class="button" href="#">Оформить заказ</a></li>
         <li><a class="button" href="#">Продолжить покупки</a></li>
       </ul>
-      <span class="modal-close">x</span>
+      <button class="modal-close" type="button">Закрыть корзину</button>
     </section>
   </body>
 </html>
