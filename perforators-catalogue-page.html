@@ -40,8 +40,12 @@
           ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="client-area">
-          <span class="login-link">Войти</span>
-          <span class="registration-link">Равшан Джамшутович</span>
+          <span class="login-link">
+            <a class="login-link-enter" href="#">Войти</a>
+          </span>
+          <span class="login-link-registration">
+            <a class="login-link-register" href="#">Равшан Джамшутович</a>
+          </span>
           <ul class="private-area">
             <li><a href="#" title="my-orders">Мои заказы</a></li>
             <li><a href="#" title="personal-area">Личный кабинет</a></li>
@@ -61,11 +65,51 @@
         <h1>Перфораторы</h1>
       </div>
       <section class="filters">
-        <!-- Здесь будет форма-->
+        <div class="filters-header">
+          <h3>Фильтры:</h3>
+        </div>
+        <form class="catalogue-filters" method="get"
+        action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Цена:</legend>
+          <input id="filters-price-range" type="range"
+          name="price-range" aria-label="">
+          <span class="price-range-min">0</span>
+          <span class="price-range-max">30000</span>
+        </fieldset>
+        <fieldset>
+          <legend>Производители:</legend>
+          <input id="filters-producers-bosch" type="checkbox"
+           name="bosch" checked>
+          <label for="filters-producers-bosch">Bosch</label>
+          <input id="filters-producers-interskol" type="checkbox"
+           name="interskol">
+          <label for="filters-producers-interskol">Интерскол</label>
+          <input id="filters-producers-makita" type="checkbox"
+           name="makita" checked>
+          <label for="filters-producers-makita">Makita</label>
+          <input id="filters-producers-dewalt" type="checkbox"
+           name="dewalt">
+          <label for="filters-producers-dewalt">Dewalt</label>
+          <input id="filters-producers-hitachi" type="checkbox"
+           name="hitachi">
+          <label for="filters-producers-hitachi">Hitachi</label>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <input id="filters-alimentation-accumulator" type="radio"
+           name="alimentation" value="accumulator">
+          <label for="filters-alimentation-accumulator">Аккумуляторные</label>
+          <input id="filters-alimentation-electrical" type="radio"
+           name="alimentation" value="electrical">
+          <label for="filters-alimentation-electrical">Сетевые</label>
+        </fieldset>
+        <button class="filters-button" type="submit">Показать</button>
+        </form>
       </section>
       <section class="catalogue">
         <div class="sort-items">
-          <h3>Фильтры:</h3>
+          <h3>Сортировка:</h3>
           <ul class="sort-buttons">
             <li><button class="sort"><span>По цене</span></button></li>
             <li><button class="sort"><span>По типу</span></button></li>
@@ -284,7 +328,7 @@
         <li><a class="button" href="#">Оформить заказ</a></li>
         <li><a class="button" href="#">Продолжить покупки</a></li>
       </ul>
-      <span class="modal-close">x</span>
+      <button class="modal-close" type="button">Закрыть корзину</button>
     </section>
   </body>
 </html>
