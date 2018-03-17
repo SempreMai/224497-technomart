@@ -72,10 +72,16 @@
         action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Цена:</legend>
-          <input id="filters-price-range" type="range"
-          name="price-range" aria-label="">
-          <span class="price-range-min">0</span>
-          <span class="price-range-max">30000</span>
+          <div class="filters-price">
+            <div class="filters-price-range"
+             aria-label="Минимальная цена">
+           </div>
+            <div class="filters-price-range"
+             aria-label="Максимальная цена">
+            </div>
+            <input type="number" name="price-range-min" value="0">
+            <input type="number" name="price-range-max" value="30000">
+          </div>
         </fieldset>
         <fieldset>
           <legend>Производители:</legend>
