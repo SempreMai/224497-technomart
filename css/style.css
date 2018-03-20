@@ -74,7 +74,7 @@ a {
 
 .site-navigation a:active,
 .user-navigation a:active {
-  color: #293449;
+  color: rgba(255, 255, 255, 0.6);
   background-color: #293449;
 }
 
@@ -84,7 +84,7 @@ a {
 }
 
 .user-order a:active {
-  color: #a4bf94;
+  color: rgba(255, 255, 255, 0.51);
   background-color: #518534;
 }
 
@@ -95,7 +95,7 @@ a {
   line-height: 21px;
   color: #000000;
 
-  background-color: #f3f7f9;
+  background-color: #f3f7f8;
 }
 
 h1 {
@@ -132,7 +132,7 @@ h2 {
 }
 
 .client-area a:active {
-  color: #c5c5c5;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .private-area {
@@ -152,7 +152,7 @@ h2 {
 }
 
 .private-area a:active {
-  color: #c5c5c5;
+  color: rgba(50, 66, 92, 0.3);
 }
 
 /*Хлебные крошки*/
@@ -200,7 +200,16 @@ h2 {
 .filters button {
    font: inherit;
    background-color: transparent;
-   border: 1px solid #e5e5e5;
+   border: 1px solid rgba(0, 0, 0, 0.5); /*не уверена в значении непрозрачности*/
+}
+
+.filters button:hover,
+.filters button:focus {
+  border-color: rgba(0, 0, 0, 0.6); /*не уверена в значении непрозрачности*/
+}
+
+.filters button:active {
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 .sort-selection {
@@ -258,16 +267,16 @@ h2 {
 
 
 .categories-list a {
-  background-color: #e5e5e5;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .categories-list a:hover,
 .categories-list a:focus {
-  background-color: #cccccc;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .categories-list a:active {
-  background-color: #b2b2b2;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .categories-list .tools {
@@ -305,6 +314,7 @@ h2 {
 .categories-slider ul h3 {
   font-size: 36px;
   line-height: 36px;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -312,6 +322,7 @@ h2 {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 400;
   color: #ffffff;
 }
 
@@ -377,10 +388,10 @@ h2 {
 }
 
 .item-pointed .to-bookmarks:active {
-  color: #c1c6ce;
+  color: rgba(0, 0, 0, 0.3);
 
   background-color: #ffffff;
-  border-color: #c1c6ce;
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 /*Популярные производители*/
@@ -392,7 +403,7 @@ h2 {
 /*Сервисы*/
 
 .main-services {
-  background-color: #f4f8f9;
+  background-color: #f4f8fa;
 }
 
 .main-services h2 {
@@ -495,12 +506,12 @@ h2 {
 }
 
 .pagination-item a {
-  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, 0.4); /*не уверена в значении непрозрачности*/
 }
 
 .pagination-item a:hover,
 .pagination-item a:focus {
-  border: 1px solid #bdc6ca;
+  border: 1px solid rgba(0, 0, 0, 0.6); /*не уверена в значении непрозрачности*/
 }
 
 .pagination-item a:active {
@@ -624,6 +635,10 @@ h2 {
   font: inherit;
   font-size: 14px;
   line-height: 18px;
+}
+
+.write-us-part-send {
+  background-color: #f4f4f4;
 }
 
 /*Корзина*/
