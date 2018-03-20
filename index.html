@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -13,16 +17,16 @@
             интернет-магазина Техномарт">
         </a>
         <ul class="user-navigation">
-          <li>
-            <form class="user-search" method="get"
+          <li class="user-search">
+            <form class="user-search-form" method="get"
             action="https://echo.htmlacademy.ru">
               <label for="user-search-item">Поиск:</label>
               <input id="user-search-item" type="search" name="search-item">
             </form>
           </li>
-          <li><a href="user-bookmarks">Закладки:<span class="quantity">0</span></a></li>
-          <li><a href="user-cart">Корзина:<span class="quantity">0</span></a></li>
-          <li><a href="user-order">Оформить заказ</a></li>
+          <li class="user-bookmarks"><a href="#">Закладки:<span class="quantity">0</span></a></li>
+          <li class="user-cart"><a href="#">Корзина:<span class="quantity">10</span></a></li>
+          <li class="user-order"><a href="#">Оформить заказ</a></li>
         </ul>
         <nav class="main-navigation">
           <ul class="site-navigation">
@@ -80,21 +84,21 @@
             <h3>Доставка</h3>
             <a class="button" href="#">Бесплатно</a>
           </li>
-          <li class="categories-slider">
-            <ul>
-              <li>
-                <h3>Перфораторы</h3>
-                <span class="categories-slider-slogan">Настоящие мужские игрушки</span>
-                <a class="button" href="perforators-catalogue-page.html">Открыть каталог</a>
-              </li>
-              <li>
-                <h3>Дрели</h3>
-                <span class="categories-slider-slogan">Соседям на радость!</span>
-                <a class="button" href="drills-catalogue-page.html">Открыть каталог</a>
-              </li>
-            </ul>
-          </li>
         </ul>
+        <div class="categories-slider">
+          <ul>
+            <li class="categories-slider-perforators">
+              <h3>Перфораторы</h3>
+              <span class="categories-slider-slogan">Настоящие мужские игрушки</span>
+              <a class="button" href="perforators-catalogue-page.html">Открыть каталог</a>
+            </li>
+            <li class="categories-slider-drills">
+              <h3>Дрели</h3>
+              <span class="categories-slider-slogan">Соседям на радость!</span>
+              <a class="button" href="drills-catalogue-page.html">Открыть каталог</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="main-popular catalogue">
         <div class="catalogue-title">
@@ -109,7 +113,7 @@
             </div>
             <div class="item-pointed">
               <a class="button" href="#">Купить</a>
-              <a class="to-bookmarks" href="#">В закладки</a>
+              <a class="button to-bookmarks" href="#">В закладки</a>
             </div>
             <h4>Перфоратор Bosch BFG 9000</h4>
             <p class="catalogue-item-price">
@@ -124,7 +128,7 @@
             </div>
             <div class="item-pointed">
               <a class="button" href="#">Купить</a>
-              <a class="to-bookmarks" href="#">В закладки</a>
+              <a class="button to-bookmarks" href="#">В закладки</a>
             </div>
             <h4>Перфоратор Bosch BFG 3000</h4>
             <p class="catalogue-item-price">
@@ -139,7 +143,7 @@
             </div>
             <div class="item-pointed">
               <a class="button" href="#">Купить</a>
-              <a class="to-bookmarks" href="#">В закладки</a>
+              <a class="button to-bookmarks" href="#">В закладки</a>
             </div>
             <h4>Перфоратор Bosch BFG 6000</h4>
             <p class="catalogue-item-price">
@@ -219,7 +223,7 @@
         </p>
         <ul class="services-selection">
           <li>
-            <a href="#" class="services-button">Доставка</a>
+            <a href="#" class="services-button services-current">Доставка</a>
           </li>
           <li>
             <a href="#" class="services-button">Гарантия</a>
@@ -229,20 +233,20 @@
           </li>
         </ul>
         <ul class="services-list">
-          <li class="services-slide">
+          <li class="services-slide delivery">
             <b>Доставка</b>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему
               подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
               поднимая его на ваш этаж</p>
           </li>
-          <li class="services-slide">
+          <li class="services-slide guarantee">
             <b>Гарантия</b>
             <p>Если купленный у нас товар поломается или заискрит,
               а также в случае пожара, спровоцированного его возгаранием,
               вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
               Дом уж восстановите как-нибудь сами.</p>
           </li>
-          <li class="services-slide">
+          <li class="services-slide loan">
             <b>Кредит</b>
             <p>Залезть в долговую яму стало проще!
               Кредитные консультанты придут вам на помощь.</p>
@@ -252,7 +256,7 @@
       </section>
       <div class="technomart-about">
         <section class="company">
-          <h2>Компания "Техномарт"</h2>
+          <h2>Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор
            товаров для ремонта и строительства не оставит равнодушными
            любителей сэкономить на гастарбайтерах.</p>
@@ -288,14 +292,14 @@
         <p class="bottom-address">г. Санкт-Петербург,
           ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55</p>
-        <ul class="site-navigation">
+        <ul class="site-navigation-top">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <ul class="site-navigation">
+        <ul class="site-navigation-bottom">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
           <li><a href="#">Инструмент</a></li>
@@ -354,7 +358,7 @@
     </section>
     <section class="modal modal-cart">
       <h2 class="catalogue-cart">Товар добавлен в корзину</h2>
-      <ul class="catalogue-perchase">
+      <ul class="catalogue-purchase">
         <li><a class="button" href="#">Оформить заказ</a></li>
         <li><a class="button" href="#">Продолжить покупки</a></li>
       </ul>

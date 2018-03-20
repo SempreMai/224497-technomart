@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -12,10 +16,16 @@
             интернет-магазина Техномарт">
         </a>
         <ul class="user-navigation">
-          <li><a href="user-search">Поиск:</a></li>
-          <li><a href="user-bookmarks">Закладки:<span class="quantity">0</span></a></li>
-          <li><a href="user-cart">Корзина:<span class="quantity">10</span></a></li>
-          <li><a href="user-order">Оформить заказ</a></li>
+          <li>
+            <form class="user-search" method="get"
+            action="https://echo.htmlacademy.ru">
+              <label for="user-search-item">Поиск:</label>
+              <input id="user-search-item" type="search" name="search-item">
+            </form>
+          </li>
+          <li class="user-bookmarks"><a href="#">Закладки:<span class="quantity">0</span></a></li>
+          <li class="user-cart"><a href="#">Корзина:<span class="quantity">10</span></a></li>
+          <li class="user-order"><a href="#">Оформить заказ</a></li>
         </ul>
         <nav class="main-navigation">
           <ul class="site-navigation">
@@ -62,7 +72,7 @@
              Перфораторы</a></li>
       </ul>
       <div class="goods-title">
-        <h1>Перфораторы</h1>
+        <h2>Перфораторы</h2>
       </div>
       <section class="filters">
         <div class="filters-header">
@@ -70,51 +80,50 @@
         </div>
         <form class="catalogue-filters" method="get"
         action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <legend>Цена:</legend>
-          <div class="filters-price">
-            <div class="filters-price-range"
-             aria-label="Минимальная цена">
-           </div>
+          <fieldset>
+            <legend>Цена:</legend>
+            <div class="filters-price">
+              <div class="filters-price-range"
+              aria-label="Минимальная цена">
+            </div>
             <div class="filters-price-range"
              aria-label="Максимальная цена">
             </div>
             <input type="number" name="price-range-min" value="0">
             <input type="number" name="price-range-max" value="30000">
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Производители:</legend>
-          <input id="filters-producers-bosch" type="checkbox"
-           name="bosch" checked>
-          <label for="filters-producers-bosch">Bosch</label>
-          <input id="filters-producers-interskol" type="checkbox"
-           name="interskol">
-          <label for="filters-producers-interskol">Интерскол</label>
-          <input id="filters-producers-makita" type="checkbox"
-           name="makita" checked>
-          <label for="filters-producers-makita">Makita</label>
-          <input id="filters-producers-dewalt" type="checkbox"
-           name="dewalt">
-          <label for="filters-producers-dewalt">Dewalt</label>
-          <input id="filters-producers-hitachi" type="checkbox"
-           name="hitachi">
-          <label for="filters-producers-hitachi">Hitachi</label>
-        </fieldset>
-        <fieldset>
-          <legend>Питание:</legend>
-          <input id="filters-alimentation-accumulator" type="radio"
-           name="alimentation" value="accumulator">
-          <label for="filters-alimentation-accumulator">Аккумуляторные</label>
-          <input id="filters-alimentation-electrical" type="radio"
-           name="alimentation" value="electrical">
-          <label for="filters-alimentation-electrical">Сетевые</label>
-        </fieldset>
-        <button class="filters-button" type="submit">Показать</button>
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <input id="filters-producers-bosch" type="checkbox"
+            name="bosch" checked>
+            <label for="filters-producers-bosch">Bosch</label>
+            <input id="filters-producers-interskol" type="checkbox"
+            name="interskol">
+            <label for="filters-producers-interskol">Интерскол</label>
+            <input id="filters-producers-makita" type="checkbox"
+            name="makita" checked>
+            <label for="filters-producers-makita">Makita</label>
+            <input id="filters-producers-dewalt" type="checkbox"
+            name="dewalt">
+            <label for="filters-producers-dewalt">Dewalt</label>
+            <input id="filters-producers-hitachi" type="checkbox"
+            name="hitachi">
+            <label for="filters-producers-hitachi">Hitachi</label>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <input id="filters-alimentation-accumulator" type="radio"
+            name="alimentation" value="accumulator" checked>
+            <label for="filters-alimentation-accumulator">Аккумуляторные</label>
+            <input id="filters-alimentation-electrical" type="radio"
+            name="alimentation" value="electrical">
+            <label for="filters-alimentation-electrical">Сетевые</label>
+          </fieldset>
+          <button class="filters-button" type="submit">Показать</button>
         </form>
       </section>
       <section class="catalogue">
-        <div class="sort-items">
+        <div class="sort-selection">
           <h3>Сортировка:</h3>
           <ul class="sort-by">
             <li class="sort-by-price"><a href="#" >По цене</a></li>
@@ -269,7 +278,7 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+          <li class="pagination-item pagination-item-current">1</li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">Следующая</a></li>
@@ -295,14 +304,14 @@
         <p class="bottom-address">г. Санкт-Петербург,
           ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55</p>
-          <ul class="site-navigation">
+          <ul class="site-navigation-top">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-          <ul class="site-navigation">
+          <ul class="site-navigation-bottom">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
             <li><a href="#">Инструмент</a></li>
@@ -331,9 +340,9 @@
     </footer>
     <section class="modal modal-cart">
       <h2 class="catalogue-cart">Товар добавлен в корзину</h2>
-      <ul class="catalogue-perchase">
+      <ul class="catalogue-purchase">
         <li><a class="button" href="#">Оформить заказ</a></li>
-        <li><a class="button" href="#">Продолжить покупки</a></li>
+        <li class="continue"><a class="button" href="#">Продолжить покупки</a></li>
       </ul>
       <button class="modal-close" type="button">Закрыть корзину</button>
     </section>
