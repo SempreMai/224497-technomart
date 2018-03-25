@@ -551,21 +551,41 @@ a {
 }
 
 /*Популярные товары*/
+.main-popular {
+  margin-bottom: 21px;
+}
 
 .catalogue-title {
   background-color: #f9f5f0;
 }
 
-.catalogue ul {
+.catalogue-title-wrapper {
+  height: 89px;
+  margin-bottom: 20px;
+}
+
+
+.catalogue-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+
   list-style: none;
 }
 
 .catalogue-item {
+  display: inline-block;
+  width: 220px;
+  height: 318px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   color: #000000;
+  border: 1px solid #eaeaea;
 }
 
 .catalogue-item-price {
@@ -619,9 +639,26 @@ a {
 }
 
 /*Популярные производители*/
+.producers {
+  margin-bottom: 85px;
+}
 
-.producers ul {
+.producers-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
+
   list-style: none;
+}
+
+.producers-list li {
+  width: 220px;
+  height: 145px;
+  margin-bottom: 20px;
+
+  border: 1px solid #eaeaea;
 }
 
 /*Сервисы*/
