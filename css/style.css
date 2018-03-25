@@ -99,6 +99,7 @@ a {
 }
 
 .main-logo {
+  display: inline-block;
   float: left;
   width: 220px;
   height: 47px;
@@ -870,10 +871,35 @@ a {
 }
 
 .site-navigation-top {
+  margin: 0px;
+  padding: 0px;
   list-style: none;
 }
 
+.bottom-navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bottom-navigation-wrapper .main-logo {
+  margin-bottom: 30px;
+}
+
+.site-navigation-top {
+  margin: 0px;
+  padding: 0px;
+}
+
+.site-navigation-top li {
+  display: inline-block;
+}
+
 .site-navigation-top a {
+  display: block;
+  height: 70px;
+  margin-right: 60px;
+
   font: inherit;
   color: #f1f5f7;
 }
@@ -887,13 +913,30 @@ a {
   color: rgba(241, 245, 247, 0.5);
 }
 
+.bottom-address {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
 .site-navigation-bottom {
+  margin: 0px;
+  padding: 0px;
+
   list-style: none;
   font: inherit;
   color: #ffd180;
 }
 
+.site-navigation-bottom li {
+  display: inline-block;
+}
+
 .site-navigation-bottom a {
+  display: block;
+  height: 70px;
+  margin-right: 55px;
+
   font: inherit;
   color: #ffd180;
 }
