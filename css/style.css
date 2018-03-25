@@ -664,31 +664,68 @@ a {
 /*Сервисы*/
 
 .main-services {
+  margin-bottom: 82px;
+
   background-color: #f4f8fa;
+  border-top: 64px solid transparent;
+}
+
+.main-services-title {
+  display: block;
+  width: 410px;
+  height: 115px;
+  margin-bottom: 74px;
 }
 
 .main-services h2 {
+  margin: 0px;
+  margin-bottom: 35px;
+  padding: 0px;
+
   color: #000000;
 }
 
 .main-services p {
+  margin: 0px;
+  padding: 0px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
 
-.main-services b {
+.services-slide b {
+  display: block;
+  margin-bottom: 35px;
   /*font-family: "PT Sans", Arial, sans-serif;*/
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
 }
 
+.services-slide p {
+  display: block;
+  width: 280px;
+  height: 90px;
+}
+
+.services-slide-wrapper {
+  display: flex;
+  justify-content:space-between;
+}
+
 .services-selection {
+  margin: 0px;
+  padding: 0px;
+
   list-style: none;
 }
 
 .services-button {
+  display: block;
+  width: 240px;
+  height: 61px;
+
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -711,7 +748,16 @@ a {
 }
 
 .services-list {
+  margin: 0px;
+  padding: 0px;
+
   list-style: none;
+}
+
+.services-slide {
+  display: block;
+  width: 620px;
+  height: 285px;
 }
 
 .services-list .delivery {
@@ -722,6 +768,8 @@ a {
 }
 
 .main-services .guarantee {
+  display: none;
+
   background-image: url("../img/services_guarantee.png");
   min-height: 285px;
   background-position: right bottom;
@@ -729,6 +777,8 @@ a {
 }
 
 .main-services .loan {
+  display: none;
+
   background-image: url("../img/services_credit.png");
   min-height: 285px;
   background-position: right bottom;
