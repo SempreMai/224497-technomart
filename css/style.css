@@ -786,6 +786,21 @@ a {
 }
 
 /*Компания*/
+.technomart-about {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 86px;
+}
+
+.about-company {
+  width: 525px;
+  height: 380px;
+}
+
+.about-contacts {
+  width: 305px;
+  height: 380px;
+}
 
 .technomart-about p {
   font-family: "PT Sans", Arial, sans-serif;
