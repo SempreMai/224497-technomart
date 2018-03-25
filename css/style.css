@@ -57,9 +57,16 @@ a {
   padding: 0px 10px;
 }
 
-/*.hidden {
-  display: none;
-}*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /*Хедер*/
 .main-header {
@@ -97,30 +104,6 @@ a {
   height: 47px;
 }
 
-.user-search {
-  width: 270px;
-  height: 42px;
-}
-
-.user-bookmarks {
-  width: 150px;
-  height: 42px;
-}
-
-.user-cart {
-  width: 150px;
-  height: 42px;
-}
-
-.user-order {
-  width: 150px;
-  height: 42px;
-}
-
-.site-navigation {
-  line-height: 17px;
-}
-
 .user-navigation,
 .site-navigation {
   /*Блочная модель*/
@@ -147,8 +130,35 @@ a {
 
 
 .user-navigation a {
+
   color: #ffffff;
 }
+
+.user-search {
+  display: block;
+  width: 270px;
+  height: 42px;
+}
+
+.user-bookmarks {
+  width: 150px;
+  height: 42px;
+}
+
+.user-cart {
+  width: 150px;
+  height: 42px;
+}
+
+.user-order {
+  width: 150px;
+  height: 42px;
+}
+
+.site-navigation {
+  line-height: 17px;
+}
+
 
 .site-navigation a {
   display: block;
@@ -397,18 +407,34 @@ a {
 /*Категории товаров*/
 
 .main-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 53px;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
 }
 
-.categories-list {
+ .categories-list{
+  align-self: stretch;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
   list-style: none;
 }
 
 
 .categories-list li {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 123px;
+  margin-right: 20px;
+
   background-color: #ffbf47;
 }
 
@@ -431,14 +457,25 @@ a {
 }
 
  .categories-list .machinery {
+  margin-right: 0px;
+
   background-color: #dc91d8;
 }
 
-.categories-list .discount {
-  background-color: #8ed78f;
+.categories-slider {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0px;
+  margin-right: 20px;
+  padding: 0px;
+
+  list-style: none;
 }
 
+
 .categories-slider .categories-slider-perforators {
+  box-sizing: border-box;
+
   background-color: #cccccc;
   background-image: url("../img/slider-perforator.jpg");
   background-repeat: no-repeat;
@@ -447,15 +484,15 @@ a {
 }
 
 .categories-slider .categories-slider-drills {
+  display: none;
+  box-sizing: border-box;
+
   background-color: #cccccc;
   background-image: url("../img/slider-drill.jpg");
   background-repeat: no-repeat;
   width: 620px;
   height: 266px;
-}
 
-.categories-slider ul {
-  list-style: none;
 }
 
 .categories-slider ul h3 {
@@ -471,6 +508,42 @@ a {
   line-height: 24px;
   font-weight: 400;
   color: #ffffff;
+}
+
+.categories-services {
+  display: block;
+  align-self: flex-end;
+  margin: 0px;
+  padding: 0px;
+
+  list-style: none;
+}
+
+.categories-services li {
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 123px;
+  margin-bottom: 20px;
+
+  background-color: #ffbf47;
+}
+
+.categories-services a {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.categories-services a:hover,
+.categories-services a:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.categories-services a:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.categories-services .discount {
+  background-color: #8ed78f;
 }
 
 /*Популярные товары*/
