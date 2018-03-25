@@ -916,6 +916,7 @@ a {
 .bottom-address {
   display: inline-block;
   margin: 0px;
+  margin-bottom: 25px;
   padding: 0px;
 }
 
@@ -950,12 +951,39 @@ a {
   color: rgba(255, 209, 128, 0.5);
 }
 
+/*Тёмно-синяя часть Футера*/
+
 .technomart-details {
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
 
   background-color: #293449;
+}
+
+.technomart-details p {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
+.technomart-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  width: 235px;
+  height: 107px;
+}
+
+.footer-social {
+  display: block;
+}
+
+.footer-social a {
+  display: inline-block;
 }
 
 .technomart-details a {
