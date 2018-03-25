@@ -568,6 +568,7 @@ a {
 
 .categories-services {
   display: block;
+  align-self: flex-end;
   margin: 0px;
   padding: 0px;
 
@@ -761,11 +762,6 @@ a {
   display: block;
   width: 280px;
   height: 90px;
-}
-
-.services-slide-wrapper {
-  display: flex;
-  justify-content:space-between;
 }
 
 .services-selection {
