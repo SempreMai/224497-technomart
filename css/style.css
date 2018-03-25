@@ -459,9 +459,9 @@ a {
 
 .main-categories {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-content: stretch;
   margin-bottom: 53px;
 
   font-size: 24px;
@@ -567,7 +567,7 @@ a {
 }
 
 .categories-services {
-  display: block;
+  display: inline-block;
   align-self: flex-end;
   margin: 0px;
   padding: 0px;
