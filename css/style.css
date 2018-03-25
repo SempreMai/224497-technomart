@@ -830,7 +830,7 @@ a {
   background-repeat: no-repeat;
 }
 
-/*Компания*/
+/*Компания и Контакты*/
 .technomart-about {
   display: flex;
   justify-content: space-between;
@@ -859,12 +859,10 @@ a {
   list-style: none;
 }
 
-/*Контакты*/
-
 /*Внутренняя страница пагинация*/
 .pagination-list {
   margin: 0px;
-  margin-top: 33px;
+  margin-top: 33px; /*53 - 20 (нижний отступ карточки товара)*/
   margin-bottom: 60px;
   padding: 0px;
 
