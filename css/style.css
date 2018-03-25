@@ -462,9 +462,14 @@ a {
   background-color: #dc91d8;
 }
 
+.categories-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 .categories-slider {
   display: inline-block;
-  align-self: flex-start;
   margin: 0px;
   margin-right: 20px;
   padding: 0px;
@@ -512,7 +517,6 @@ a {
 
 .categories-services {
   display: block;
-  align-self: flex-end;
   margin: 0px;
   padding: 0px;
 
