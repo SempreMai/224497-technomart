@@ -29,6 +29,11 @@ h2 {
   text-transform: uppercase;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -60,13 +65,20 @@ a {
   padding: 0px 10px;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -95,19 +107,29 @@ a {
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
-
-
 }
 
 .main-logo {
-  display: inline-block;
+  display: block;
   float: left;
   width: 220px;
   height: 47px;
 }
 
-.user-navigation,
+.user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 720px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -195,7 +217,7 @@ a {
 }
 
 .main-navigation {
-  order: 3;
+  orphans: 3;
   margin-bottom: 60px;
 
   background-color: #32425c;
@@ -204,6 +226,8 @@ a {
 /*Светлая часть хедера*/
 
 .header-bottom {
+  order: 1;
+
   display: flex;
   justify-content: space-between;
   margin-bottom: 44px;
@@ -715,9 +739,10 @@ a {
 
 .main-services {
   margin-bottom: 82px;
+  padding-top: 64px;
 
   background-color: #f4f8fa;
-  border-top: 64px solid transparent;
+  /*border-top: 64px solid transparent;*/
 }
 
 .main-services-title {
@@ -899,9 +924,10 @@ a {
 /*Внутренняя страница описание*/
 .catalogue-item-description {
   height: 261px;
+  padding-top: 64px;
   background-color: #f2f6f8;
   color: #000000;
-  border-top: 64px solid transparent;
+  /*border-top: 64px solid transparent;*/
 }
 
 .catalogue-item-description h2 {
