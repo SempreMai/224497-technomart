@@ -11,6 +11,7 @@ body {
   background-color: #ffffff;
 }
 
+
 h2 {
   padding: 0px;
   margin: 0px;
@@ -461,6 +462,9 @@ input[type="radio"].visually-hidden {
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
+
+
+
 }
 
  .categories-list{
@@ -471,24 +475,31 @@ input[type="radio"].visually-hidden {
    /*align-items: space-between;*/
    align-content: space-between;
 
-   margin: 0px;
-   padding: 0px;
+   margin: 0;
+   padding: 0;
+
    list-style: none;
+
 }
 
+.category-services {
+  margin-top: -15px;
+}
 
-.category-item {
+.categories-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.category-item,
+.category-services-item {
   display: block;
   box-sizing: border-box;
   width: 300px;
   height: 123px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 
   background-color: #ffbf47;
-}
-
-.category-item:last-child {
-  margin-bottom: 0;
 }
 
 .tools {
@@ -496,28 +507,30 @@ input[type="radio"].visually-hidden {
 }
 
 .machinery {
-  /*margin-right: 0px;*/
-
   background-color: #dc91d8;
 }
 
-.discount {
-  margin-bottom: auto;
-  background-color: #8ed78f;
+.category-services-item:last-child {
+  margin-bottom: 0px;
 }
 
-.delivery {
-  align-self: center;
+.discount {
+  background-color: #8ed78f;
+
 }
 
 .categories-slider {
+  position: relative;
+}
+
+.categories-sliders div {
   display: block;
+  /*box-sizing: border-box;*/
   width: 620px;
   height: 266px;
+  margin-top: -8px;
   background-color: #cccccc;
-  margin: 0px;
 
-  padding: 0px;
 
   list-style: none;
 }
@@ -530,10 +543,21 @@ input[type="radio"].visually-hidden {
 }
 
 .drills {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 
   background-color: #cccccc;
   background-image: url("../img/slider-drill.jpg");
+}
+
+.category-services-item {
+margin-top: -4px;
+}
+
+.category-services h3 {
+  font-size: 24px;
 }
 
 .categories-slider h3 {
@@ -551,6 +575,11 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
+.category-services-item li {
+  margin: 0;
+  padding: 0;
+}
+
 .categories-slider .button {
   background-color: #ee3643;
 }
@@ -564,15 +593,19 @@ input[type="radio"].visually-hidden {
   background-color: #ba2732;
 }
 
+.category-services-item a,
 .category-item  a {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.category-services-item a:hover,
+.category-services-item a:focus,
 .category-item  a:hover,
 .category-item  a:focus {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.category-services-item a:active,
 .category-item  a:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
