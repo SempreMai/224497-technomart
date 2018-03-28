@@ -113,7 +113,7 @@ input[type="radio"].visually-hidden {
 .user-navigation a {
   display: block;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 
   vertical-align: middle;
   color: #ffffff;
@@ -917,6 +917,8 @@ margin-top: -4px;
 
 /*Внутренняя страница пагинация*/
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0px;
   margin-top: 33px; /*53 - 20 (нижний отступ карточки товара)*/
   margin-bottom: 60px;
@@ -927,20 +929,34 @@ margin-top: -4px;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
+  text-transform: uppercase;
 }
 
-.pagination-list li {
-  display: inline-block;
+.pagination-item {
+  margin-right: 10px;
 }
 
 .pagination-item-current {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 9px 16px;
+
   color: #ffffff;
 
   background-color: #ee3643;
 }
 
 .pagination-item a {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 9px 15px;
   border: 1px solid rgba(0, 0, 0, 0.4); /*не уверена в значении непрозрачности*/
+}
+
+.pagination-item .next {
+  padding: 9px 30px;
 }
 
 .pagination-item a:hover,
@@ -954,22 +970,28 @@ margin-top: -4px;
 
 /*Внутренняя страница описание*/
 .catalogue-item-description {
-  height: 261px;
-  padding-top: 64px;
+  display: block;
+  box-sizing: border-box;
+  min-height: 260px;
+  padding-top: 67px;
   background-color: #f2f6f8;
   color: #000000;
   /*border-top: 64px solid transparent;*/
 }
 
-.catalogue-item-description h2 {
+.item-description-wrapper h2 {
+  margin: 0;
+  padding: 0;
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   color: #000000;
+  text-transform: uppercase;
 }
 
 .catalogue-item-description p {
   display: block;
+  margin: 0;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
