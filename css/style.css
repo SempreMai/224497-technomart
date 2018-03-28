@@ -11,17 +11,6 @@ body {
   background-color: #ffffff;
 }
 
-
-h2 {
-  padding: 0px;
-  margin: 0px;
-
-  font-size: 30px;
-  line-height: 30px;
-  color: #32425c;
-  text-transform: uppercase;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -32,9 +21,11 @@ a {
 }
 
 .button {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
   font-size: 14px;
   line-height: 18px;
-  text-align: center;
   color: #ffffff;
   vertical-align: middle;
   text-transform: uppercase;
@@ -82,7 +73,7 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 59px;
+  margin-bottom: 60px;
 
   background-color: #f3f7f8;
 }
@@ -611,8 +602,6 @@ margin-top: -4px;
 }
 
 
-
-
 /*Популярные товары*/
 .inner-page-catalogue {
   display: flex;
@@ -620,21 +609,40 @@ margin-top: -4px;
 }
 
 
-.catalogue-title {
-  height: 89px;
-  margin-bottom: 20px;
-
-  background-color: #f9f5f0;
-}
-
-
 /*Заголовок внутренней страницы*/
-
 .goods-title {
   background-color: #f2f6f8;
 }
 
 /*Непосредственно каталог*/
+.catalogue-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+  padding-left: 28px;
+  padding-right: 24px;
+  margin-bottom: 20px;
+
+  vertical-align: middle;
+  background-color: #f9f5f0;
+}
+
+.catalogue-title h2 {
+  display: block;
+/*  align-self: flex-start;*/
+  padding: 0px;
+  margin: 0px;
+
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.catalogue-title a {
+  /*align-self: flex-end;*/
+}
 
 .catalogue-list {
   display: flex;
@@ -648,8 +656,8 @@ margin-top: -4px;
 
 .catalogue-item {
   display: inline-block;
-  width: 220px;
-  height: 318px;
+  width: 218px;
+  height: 316px;
   margin-bottom: 20px;
 
   font-family: "PT Sans", Arial, sans-serif;
@@ -712,7 +720,7 @@ margin-top: -4px;
 
 /*Популярные производители*/
 .producers {
-  margin-bottom: 85px;
+  margin-bottom: 65px;/*85 - 20 нижний отступ каталога производителей*/
 }
 
 .producers-list {
@@ -726,8 +734,8 @@ margin-top: -4px;
 }
 
 .producers-list li {
-  width: 220px;
-  height: 145px;
+  width: 218px;
+  height: 143px;
   margin-bottom: 20px;
 
   border: 1px solid #eaeaea;
@@ -737,7 +745,7 @@ margin-top: -4px;
 
 .main-services {
   margin-bottom: 82px;
-  padding-top: 64px;
+  padding-top: 68px;
 
   background-color: #f4f8fa;
   /*border-top: 64px solid transparent;*/
@@ -747,14 +755,15 @@ margin-top: -4px;
   display: block;
   width: 410px;
   height: 115px;
-  margin-bottom: 74px;
+  margin-bottom: 57px;
 }
 
 .main-services h2 {
   margin: 0px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   padding: 0px;
 
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -767,10 +776,16 @@ margin-top: -4px;
   line-height: 24px;
 }
 
+.services-slide-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .services-slide b {
   display: block;
   margin-bottom: 35px;
   /*font-family: "PT Sans", Arial, sans-serif;*/
+  text-transform: uppercase;
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
@@ -783,24 +798,29 @@ margin-top: -4px;
 }
 
 .services-selection {
+  width: 240px;
   margin: 0px;
   padding: 0px;
-
+  text-align: left;
   list-style: none;
+}
+
+.services-selection li:nth-child(2) {
+  border-bottom: 1px solid #4d637b;
 }
 
 .services-button {
   display: block;
   width: 240px;
-  height: 61px;
+  height: 60px;
 
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
-
   background-color: #32425c;
 }
+
 
 .services-button:hover,
 .services-button:focus {
@@ -811,7 +831,6 @@ margin-top: -4px;
 
 .services-current {
   color: #32425c;
-
   background-color: #ffffff;
 }
 
@@ -855,9 +874,23 @@ margin-top: -4px;
 
 /*Компания и Контакты*/
 .technomart-about {
+  height: 366px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 86px;
+}
+
+.technomart-about h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.technomart-about p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
 }
 
 .about-company {
@@ -944,6 +977,9 @@ margin-top: -4px;
 }
 
 /*Футер*/
+.main-footer {
+  margin: auto;
+}
 
 .bottom-site-navigation {
   font: inherit;
