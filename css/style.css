@@ -209,24 +209,26 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
   margin: 0;
   padding: 0;
 
   line-height: 17px;
   list-style: none;
+  border-bottom: 5px solid #293449;
 }
 
 .site-navigation a {
   display: block;
-  padding: 20px 28px 18px 28px;
+  /*padding: 20px 25px*/
+  padding-top: 20px;
+  padding-bottom: 19px;
 
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
   background-color: #32425c;
-  border-bottom: 5px solid #293449;
 }
 
 .site-navigation a:hover,
@@ -234,29 +236,50 @@ input[type="radio"].visually-hidden {
 .user-navigation a:hover,
 .user-navigation a:focus {
   background-color: #1d2739;
-  border-bottom: 5px solid transparent;
 }
 
 .site-navigation a:active,
 .user-navigation a:active {
   color: rgba(255, 255, 255, 0.6);
   background-color: #1d2739;
-  border-bottom: 5px solid #293449;
   opacity: 0.5;
 }
 
 .site-navigation .site-navigation-current {
-  padding-left: 50px;
+  min-width: 140px;
+  /*padding-left: 50px;
+  padding-right: 33px;*/
 }
 
 .site-navigation .site-navigation-contacts {
-  padding-right: 50px;
+  min-width: 150px;
+  /*padding-right: 50px;
+  padding-left: 34px;*/
 }
 
+.site-navigation .site-navigation-company {
+  min-width: 125px;
+}
+
+.site-navigation .site-navigation-catalogue {
+  min-width: 110px;
+}
+
+.site-navigation .site-navigation-news {
+  min-width: 115px;
+}
+
+.site-navigation .site-navigation-delivery {
+  min-width: 115px;
+}
+
+.site-navigation .site-navigation-offers {
+  min-width: 185px;
+}
 
 .main-navigation {
   order: 3;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 
   background-color: #32425c;
 }
@@ -339,11 +362,6 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   justify-content: space-between;
   min-width: 280px;
-}
-
-.client-area span {
-
-
 }
 
 .login-link a {
