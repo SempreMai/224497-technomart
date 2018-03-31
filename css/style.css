@@ -876,7 +876,14 @@ input[type="radio"].visually-hidden {
 }
 
 .catalogue-title a {
-  /*align-self: flex-end;*/
+  display: block;
+  box-sizing: border-box;
+  padding: 12px 10px 10px 10px;
+  min-width: 250px;
+
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ee3643;
 }
 
 .catalogue-list {
