@@ -18,16 +18,17 @@
             интернет-магазина Техномарт">
           </a>
           <ul class="user-navigation">
-            <li class="user-search">
+            <li>
               <form class="user-search-form" method="get"
                 action="https://echo.htmlacademy.ru">
-                <label for="user-search-item">Поиск:</label>
-                <input id="user-search-item" type="search" name="search-item" placeholder="Поиск:">
+                <button class="search-button" type="submit" aria-label="Искать">
+                </button>
+                <input class="search-window" id="user-search-item" type="search" name="search-item" placeholder="Поиск:">
               </form>
             </li>
-            <li ><a class="user-bookmarks" href="#">Закладки:<span class="quantity">0</span></a></li>
-            <li><a class="user-cart" href="#">Корзина:<span class="quantity">10</span></a></li>
-            <li><a class="user-order" href="#">Оформить заказ</a></li>
+            <li class="user-navigation-item"><a class="user-bookmarks" href="#">Закладки:<span class="quantity">0</span></a></li>
+            <li class="user-navigation-item"><a class="user-cart" href="#">Корзина:<span class="quantity">10</span></a></li>
+            <li class="user-navigation-item"><a class="user-order" href="#">Оформить заказ</a></li>
           </ul>
         </div>
       </div>
@@ -44,8 +45,7 @@
         </ul>
       </nav>
       <div class="header-bottom container">
-        <h1>Интернет-магазин строительных материалов и инструментов для
-           ремонта</h1>
+        <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <div class="header-contacts">
           <div class="header-phone"><a href="tel:88125550555">
             +7 (812) 555-05-55</a></div>
@@ -56,8 +56,8 @@
           <span class="login-link">
             <a class="login-link-enter" href="#">Войти</a>
           </span>
-          <span class="login-link-registration">
-            <a class="login-link-register" href="#">Равшан Джамшутович</a>
+          <span class="login-link">
+            <a class="login-link-register" href="#">Регистрация</a>
           </span>
         </div>
       </div>
@@ -65,11 +65,20 @@
     <main>
       <div class="inner-catalogue-wrapper container">
         <ul class="breadcrumbs">
-          <li><a href="index.html" title="main">Главная страница</a></li>
-          <li><a href="catalogue.html" title="catalogue">Каталог</a></li>
-          <li><a href="tools.html" title="tools">Инструмент</a></li>
-          <li class="breadcrumbs-current"><a href="#" title="perforators">
-               Перфораторы</a></li>
+          <li class="breadcrumbs-main">
+            <a href="index.html" title="main">
+              <span class="visually-hidden">Главная страница</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="catalogue">Каталог</a>
+          </li>
+          <li>
+            <a href="#" title="tools">Инструмент</a>
+          </li>
+          <li class="breadcrumbs-current">
+            <a href="#" title="perforators">Перфораторы</a>
+          </li>
         </ul>
         <div class="goods-title catalogue-title">
           <h2>Перфораторы</h2>
@@ -81,43 +90,46 @@
             </div>
             <form class="catalogue-filters" method="get"
             action="https://echo.htmlacademy.ru">
-              <fieldset>
+              <fieldset class="filters-price">
                 <legend>Цена:</legend>
                 <div class="filters-price">
-                  <div class="filters-price-range"
-                    aria-label="Минимальная цена">
+                  <div class="filters-range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
                   </div>
-                  <div class="filters-price-range"
-                  aria-label="Максимальная цена">
+                  <div class="filters-price-controls">
+                  <input name="min-price" type="text" value="0" aria-label="Минимальная цена">
+                  <input name="max-price" type="text" value="30000" aria-label="Максимальная цена">
                   </div>
-                  <input type="number" name="price-range-min" value="0">
-                  <input type="number" name="price-range-max" value="30000">
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="filters-producers">
                 <legend>Производители:</legend>
-                <input id="filters-producers-bosch" type="checkbox"
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filters-producers-bosch" type="checkbox"
                 name="bosch" checked>
                 <label for="filters-producers-bosch">Bosch</label>
-                <input id="filters-producers-interskol" type="checkbox"
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filters-producers-interskol" type="checkbox"
                 name="interskol">
                 <label for="filters-producers-interskol">Интерскол</label>
-                <input id="filters-producers-makita" type="checkbox"
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filters-producers-makita" type="checkbox"
                 name="makita" checked>
                 <label for="filters-producers-makita">Makita</label>
-                <input id="filters-producers-dewalt" type="checkbox"
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filters-producers-dewalt" type="checkbox"
                 name="dewalt">
                 <label for="filters-producers-dewalt">Dewalt</label>
-                <input id="filters-producers-hitachi" type="checkbox"
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filters-producers-hitachi" type="checkbox"
                 name="hitachi">
                 <label for="filters-producers-hitachi">Hitachi</label>
               </fieldset>
-              <fieldset>
+              <fieldset class="filters-alimentation">
                 <legend>Питание:</legend>
-                <input id="filters-alimentation-accumulator" type="radio"
+                <input class="visually-hidden filter-input filter-input-radio" id="filters-alimentation-accumulator" type="radio"
                 name="alimentation" value="accumulator" checked>
                 <label for="filters-alimentation-accumulator">Аккумуляторные</label>
-                <input id="filters-alimentation-electrical" type="radio"
+                <input class="visually-hidden filter-input filter-input-radio" id="filters-alimentation-electrical" type="radio"
                 name="alimentation" value="electrical">
                 <label for="filters-alimentation-electrical">Сетевые</label>
               </fieldset>

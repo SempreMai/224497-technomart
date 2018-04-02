@@ -92,10 +92,6 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
-
-  font-size: 17px;
-  line-height: 18px;
-  color: #ffffff;
 }
 
 .main-logo {
@@ -113,12 +109,21 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.user-navigation-item {
+  min-width: 150px;
+}
+
 .user-navigation a {
   display: block;
-  padding: 12px 20px;
+  box-sizing: border-box;
+  min-height: 42px;
+  padding-top: 10px;
 
-  vertical-align: middle;
+  font-size: 17px;
+  line-height: 18px;
   color: #ffffff;
+  list-style: none;
+  text-align: left;
   background-color: #32425c;
 }
 
@@ -130,18 +135,90 @@ input[type="radio"].visually-hidden {
   padding-left: 5px;
 }
 
-.user-search {
+.user-search-form {
+  position: relative;
   display: block;
-  max-width: 270px;
+  box-sizing: border-box;
+  width: 270px;
+  height: 42px;
+  padding: 0;
+  padding-left: 50px;
+  margin: 0;
+}
+
+.search-button {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  display: block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+
+  background-color: transparent;
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.5;
+  border: none;
+}
+
+.search-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  padding-left: 50px;
+  min-height: 42px;
+
+  background-color: transparent;
+  border: none;
+}
+
+/*Не знаю, как оживить!!!*/
+
+.search-window:focus + button {
+  color: #000000;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.search-button:focus {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  display: block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+
+  background-color: transparent;
+  background-image: url("../img/icon-search-focus.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.5;
+  border: none;
+}
+
+.user-bookmarks {
+  position: relative;
+  padding-left: 45px;
+}
+
+.user-cart {
+  position: relative;
   padding-left: 50px;
 }
 
-.user-navigation .user-cart,
-.user-navigation .user-bookmarks {
-  position: relative;
-  padding-left: 50px;
-  /*max-width: 150px;*/
+.user-navigation .user-order {
+  padding-left: 20px;
+  background-color: #63a63e;
 }
+
 
 .user-cart::before {
   content: "";
@@ -182,14 +259,6 @@ input[type="radio"].visually-hidden {
 .user-cart:active::before,
 .user-bookmarks:active::before {
   opacity: 1;
-}
-
-.user-order {
-  /*width: 150px;*/
-}
-
-.user-navigation .user-order {
-  background-color: #63a63e;
 }
 
 
@@ -301,7 +370,7 @@ input[type="radio"].visually-hidden {
 .header-bottom h1 {
   width: 195px;
   margin: 0px;
-  padding: 3px 75px 41px 50px;
+  padding: 3px 75px 40px 50px;
 
   font-size: 16px;
   line-height: 23px;
@@ -437,19 +506,51 @@ input[type="radio"].visually-hidden {
   top: -40px;
   margin: 0px;
   padding: 0px;
-  list-style: none;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-width: 365px;
 
-.breadcrumbs li {
-  display: inline-block;
-}
-
-.breadcrumbs a {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   color: #000000;
   line-height: 18px;
   text-transform: uppercase;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs li::before {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  left: -28px;
+
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 1px solid #c1c6ce;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(45deg);
+}
+
+.breadcrumbs-main::before {
+  display: none;
+}
+
+.breadcrumbs-main {
+  display: block;
+  width: 15px;
+  height: 18px;
+  background-image: url("../img/icon-home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*Фильтры и сортировка*/
@@ -462,22 +563,41 @@ input[type="radio"].visually-hidden {
   color: #000000;
   text-transform: uppercase;
 }
+
+
 .filters-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   height: 38px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   background-color: #f7f3ec;
+  border-radius: 3px;
 }
 
 .filters-header h3 {
-  display: inline-block;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+
+.filters fieldset {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  border-bottom: 1px solid #c1c6ce;
 }
 
 .filters legend{
+  margin-bottom: 15px;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -489,10 +609,204 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
+.filters-range-controls {
+  position: relative;
+
+  height: 41px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: #f7f3ec;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.filters-range-controls .scale {
+  height: 2px;
+
+  background-color: #d7dcde;
+}
+
+.filters-range-controls .bar {
+  width: 140px;
+  height: 2px;
+
+  background-color: #00ca74;
+}
+
+.filters-range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filters-range-controls .toggle-min {
+  left: 18px;
+}
+
+.filters-range-controls .toggle-max {
+  left: 160px;
+}
+
+.filters-price-controls {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.filters-price-controls input {
+  display: inline-block;
+  width: 95px;
+  padding: 9px 0;
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.filters-price-controls::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 105px;
+
+  width: 10px;
+  height: 1px;
+  background-color: #000000;
+}
+
+.catalogue-filters .filters-producers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  margin-top: 15px;
+}
+
+.catalogue-filters .filters-alimentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  margin-top: 19px;
+  margin-bottom: 57px;
+  border: none;
+}
+
+.filters-producers label,
+.filters-alimentation label {
+  position: relative;
+
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+
+  cursor: pointer;
+  user-select: none;
+
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+  opacity: 3; /*Не работает!!!*/
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.4;
+}
+
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+
+  width: 19px;
+  height: 19px;
+
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: -8px;
+  left: 9px;
+
+  width: 5px;
+  height: 15px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  top: -4px;
+  left: -1px;
+
+  width: 17px;
+  height: 17px;
+
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 7px;
+
+  width: 9px;
+  height: 9px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
 .filters button {
-   font: inherit;
-   background-color: transparent;
-   border: 1px solid rgba(0, 0, 0, 0.5); /*не уверена в значении непрозрачности*/
+  display: block;
+  box-sizing: border-box;
+  padding: 9px 39px;
+
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2); /*не уверена в значении непрозрачности*/
+  border-radius: 3px;
 }
 
 .filters button:hover,
