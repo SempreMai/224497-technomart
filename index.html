@@ -18,16 +18,17 @@
             интернет-магазина Техномарт">
           </a>
           <ul class="user-navigation">
-            <li class="user-search">
+            <li>
               <form class="user-search-form" method="get"
                 action="https://echo.htmlacademy.ru">
-                <label for="user-search-item">Поиск:</label>
-                <input id="user-search-item" type="search" name="search-item" placeholder="Поиск:">
+                <button class="search-button" type="submit" aria-label="Искать">
+                </button>
+                <input class="search-window" id="user-search-item" type="search" name="search-item" placeholder="Поиск:">
               </form>
             </li>
-            <li ><a class="user-bookmarks" href="#">Закладки:<span class="quantity">0</span></a></li>
-            <li><a class="user-cart" href="#">Корзина:<span class="quantity">0</span></a></li>
-            <li><a class="user-order" href="#">Оформить заказ</a></li>
+            <li class="user-navigation-item"><a class="user-bookmarks" href="#">Закладки:<span class="quantity">0</span></a></li>
+            <li class="user-navigation-item"><a class="user-cart" href="#">Корзина:<span class="quantity">10</span></a></li>
+            <li class="user-navigation-item"><a class="user-order" href="#">Оформить заказ</a></li>
           </ul>
         </div>
       </div>
