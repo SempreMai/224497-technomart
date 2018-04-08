@@ -21,13 +21,23 @@
             <li>
               <form class="user-search-form" method="get"
                 action="https://echo.htmlacademy.ru">
-                <button class="search-button" type="submit" aria-label="Искать">
-                </button>
                 <input class="search-window" id="user-search-item" type="search" name="search-item" placeholder="Поиск:">
+                <button class="search-button" type="submit" aria-label="Искать">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="17px"
+                  	 height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+                  <g id="Layer_1">
+                  </g>
+                  <g id="Layer_2">
+                  	<path fill="#FFFFFF" d="M17,15.586l-3.542-3.542C14.421,10.782,15,9.21,15,7.5C15,3.358,11.643,0,7.5,0C3.358,0,0,3.358,0,7.5
+                  		C0,11.643,3.358,15,7.5,15c1.71,0,3.282-0.579,4.544-1.542L15.586,17L17,15.586z M2,7.5C2,4.467,4.467,2,7.5,2
+                  		C10.532,2,13,4.467,13,7.5c0,3.032-2.468,5.5-5.5,5.5C4.467,13,2,10.532,2,7.5z"/>
+                  </g>
+                  </svg>
+                </button>
               </form>
             </li>
             <li class="user-navigation-item"><a class="user-bookmarks" href="#">Закладки:<span class="quantity">0</span></a></li>
-            <li class="user-navigation-item"><a class="user-cart" href="#">Корзина:<span class="quantity">10</span></a></li>
+            <li class="user-navigation-item"><a class="user-cart" href="#">Корзина:<span class="quantity">0</span></a></li>
             <li class="user-navigation-item"><a class="user-order" href="#">Оформить заказ</a></li>
           </ul>
         </div>
@@ -37,7 +47,7 @@
           <li><a class="site-navigation-current" href="#">Главная
             </a></li>
           <li><a class="site-navigation-company" href="#">Компания</a></li>
-          <li><a class="site-navigation-catalogue" href="#">Каталог</a></li>
+          <li><a class="site-navigation-catalogue" href="perforators-catalogue-page.html">Каталог</a></li>
           <li><a class="site-navigation-news" href="#">Новости</a></li>
           <li><a class="site-navigation-offers" href="#">Спецпредложения</a></li>
           <li><a class="site-navigation-delivery" href="#">Доставка</a></li>
@@ -53,12 +63,10 @@
           ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="client-area">
-          <span class="login-link">
-            <a class="login-link-enter" href="#">Войти</a>
-          </span>
-          <span class="login-link">
-            <a class="login-link-register" href="#">Регистрация</a>
-          </span>
+          <ul>
+            <li class="login-link"><a class="login-main" href="#">Войти</a>
+            <li class="login-link"><a class="register-main" href="#">Регистрация</a>
+          </ul>
         </div>
       </div>
     </header>
@@ -68,13 +76,13 @@
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="categories-list"><li class="category-item materials flag-new">
               <h3>Материалы</h3>
-              <a class="button" href="#">На любой вкус</a>
+              <a href="#">На любой вкус</a>
             </li><li class="category-item tools">
               <h3>Инструмент</h3>
-              <a class="button" href="#">На все случаи</a>
+              <a href="#">На все случаи</a>
             </li><li class="category-item machinery">
               <h3>Техника</h3>
-              <a class="button" href="#">Для стройки</a>
+              <a href="#">Для стройки</a>
             </li></ul>
           <div class="categories-slider-wrapper">
             <div class="slider-controls">
@@ -89,7 +97,7 @@
                 <div class="slide-content">
                   <h3>Перфораторы</h3>
                   <span class="categories-slider-slogan">Настоящие мужские игрушки</span>
-                  <a class="button" href="#">Открыть каталог</a>
+                  <a class="button" href="perforators-catalogue-page.html">Открыть каталог</a>
                 </div>
               </li><li class="slide drills" id="drills">
                 <div class="slide-content">
@@ -101,10 +109,10 @@
           </div>
           <ul class="category-services"><li class="category-services-item discount">
                 <h3>Скидки 50%</h3>
-                <a class="button" href="#">На 350 товаров</a>
+                <a href="#">На 350 товаров</a>
             </li><li class="category-services-item delivery">
                 <h3>Доставка</h3>
-                <a class="button" href="#">Бесплатно</a>
+                <a href="#">Бесплатно</a>
             </li></ul>
         </section>
         <section class="main-popular catalogue">
@@ -119,8 +127,8 @@
                 alt="Перфоратор Bosch BFG 9000">
               </div>
               <div class="item-pointed">
-                <a class="button buy" href="#">Купить</a>
-                <a class="button to-bookmarks" href="#">В закладки</a>
+                <a class="buy" href="#">Купить</a>
+                <a class="to-bookmarks" href="#">В закладки</a>
               </div>
               <h4>Перфоратор BOSCH BFG 9000</h4>
               <p class="catalogue-item-price">
@@ -134,8 +142,8 @@
                 alt="Перфоратор Bosch BFG 3000">
               </div>
               <div class="item-pointed">
-                <a class="button buy" href="#">Купить</a>
-                <a class="button to-bookmarks" href="#">В закладки</a>
+                <a class="buy" href="#">Купить</a>
+                <a class="to-bookmarks" href="#">В закладки</a>
               </div>
               <h4>Перфоратор BOSCH BFG 3000</h4>
               <p class="catalogue-item-price">
@@ -149,8 +157,8 @@
                 alt="Перфоратор Bosch BFG 6000">
               </div>
               <div class="item-pointed">
-                <a class="button buy" href="#">Купить</a>
-                <a class="button to-bookmarks" href="#">В закладки</a>
+                <a class="buy" href="#">Купить</a>
+                <a class="to-bookmarks" href="#">В закладки</a>
               </div>
               <h4>Перфоратор BOSCH BFG 6000</h4>
               <p class="catalogue-item-price">
@@ -164,8 +172,8 @@
                 alt="Перфоратор Bosch BFG 2000">
               </div>
               <div class="item-pointed">
-                <a class="button buy" href="#">Купить</a>
-                <a class="button to-bookmarks" href="#">В закладки</a>
+                <a class="buy" href="#">Купить</a>
+                <a class="to-bookmarks" href="#">В закладки</a>
               </div>
               <h4>Перфоратор BOSCH BFG 2000</h4>
               <p class="catalogue-item-price">
@@ -307,7 +315,7 @@
           <ul class="site-navigation-top">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
-            <li><a href="#">Каталог</a></li>
+            <li><a href="perforators-catalogue-page.html">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
@@ -351,7 +359,7 @@
       <button class="modal-close">Закрыть карту</button>
     </section>
     <section class="modal modal-write-us">
-      <form class="write-us-form" method="get"
+      <form class="write-us-form" method="post"
         action="https://echo.htmlacademy.ru">
         <h3 class="visually-hidden">Напишите нам</h3>
         <p class="write-us-part-name">
@@ -377,8 +385,8 @@
     <section class="modal modal-cart">
       <h2 class="catalogue-cart">Товар добавлен в корзину</h2>
       <ul class="catalogue-purchase">
-        <li class="order-details"><a class="button" href="#">Оформить заказ</a></li>
-        <li class="continue"><a class="button" href="#">Продолжить покупки</a></li>
+        <li><a class="button" href="#">Оформить заказ</a></li>
+        <li><a class="continue" href="#">Продолжить покупки</a></li>
       </ul>
       <button class="modal-close cart-close" type="button">Закрыть корзину</button>
     </section>
