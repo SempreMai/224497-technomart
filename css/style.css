@@ -128,7 +128,6 @@ input[type="radio"].visually-hidden {
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
-  list-style: none;
   text-align: left;
   background-color: #32425c;
 }
@@ -147,7 +146,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-.user-search-form .search-window {
+.user-search-form input {
   /*position: relative;*/
   display: block;
   box-sizing: border-box;
@@ -155,7 +154,10 @@ input[type="radio"].visually-hidden {
   height: 42px;
   padding-left: 50px;
 
+  font-size: 17px;
+  line-height: 18px;
   color: #ffffff;
+  text-transform: uppercase;
 
   background-color: transparent;
   border: none;
@@ -167,7 +169,7 @@ input[type="radio"].visually-hidden {
   top: 0;
   left: 0;
   width: 50px;
-  height: 41px;
+  height: 42px;
   padding: 0;
   margin: 0;
 
@@ -178,31 +180,19 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-/*Не работает*/
-.search-window + button:focus {
+.search-window:focus {
   color: #000000;
   background-color: #ffffff;
   outline: none;
 }
 
-/*.search-button:focus {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  display: block;
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  margin: 0;
+.search-button:hover {
+  opacity: 1;
+}
 
-  background-color: transparent;
-  background-image: url("../img/icon-search-focus.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  opacity: 0.5;
-  border: none;
-}*/
+.search-window:focus + .search-button path {
+  fill: #EE3643;
+}
 
 .user-bookmarks {
   position: relative;
