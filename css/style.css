@@ -496,13 +496,13 @@ button:focus::-ms-button {
   background-color: #ffffff;
 }
 
-.login-link .login-inner {
+.login-link .logout-inner-inner {
   position: relative;
   min-width: 299px;
   padding: 12px 47px 12px 46px;
 }
 
-.login-link .login-inner::before {
+.login-link .logout-inner::before {
   content: "";
 
   position: absolute;
@@ -532,6 +532,7 @@ button:focus::-ms-button {
   background-position: 50% 50%;
   /*background-color: red;*/
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .login-link a:hover,
