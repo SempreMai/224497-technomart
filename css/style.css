@@ -1020,6 +1020,9 @@ button:focus::-ms-button {
 }
 
 .sort-order a {
+  /*display: block;
+  width: 11px;
+  height: 10px;*/
   opacity: 0.2;
 }
 
@@ -1028,14 +1031,14 @@ button:focus::-ms-button {
   opacity: 1;
 }
 
-.sort-order a:active,
-.sort-order .sort-selected {
-  opacity: 1;
-}
-
 .sort-order a:active path,
 .sort-order .sort-selected path {
   fill: #EE3643;
+}
+
+.sort-order a:active,
+.sort-order .sort-selected {
+  opacity: 1;
 }
 
 /*.sort-order-descending::before {
@@ -1048,7 +1051,7 @@ button:focus::-ms-button {
   width: 0;
   height: 0;
 
-  width: 11px;
+  /*width: 11px;
   height: 10px;
 
   background-image: url(../img/icon-up-dir.svg);
@@ -1061,20 +1064,20 @@ button:focus::-ms-button {
   border-right-color: transparent;
   transform: scaleY(1.7);
   cursor: pointer;
-}*/
+}
 
-/*.sort-order-descending:hover::before,
+.sort-order-descending:hover::before,
 .sort-order-descending:focus::before {
-  opacity: 1;*/
-  /*border-color: #231f20;
+  /*opacity: 1;
+  border-color: #231f20;
   border-top-width: 0;
   border-left-color: transparent;
   border-right-color: transparent;
   transform: scaleY(1.7);
-}*/
+}
 
 
-/*.sort-order-ascending::after {
+.sort-order-ascending::after {
   content: "";
 
   position: absolute;
@@ -1084,10 +1087,10 @@ button:focus::-ms-button {
   width: 0;
   height: 0;
 
-  width: 11px;
+  /*width: 11px;
   height: 10px;
 
-  /*background-image: url(../img/icon-down-dir.svg);
+  background-image: url(../img/icon-down-dir.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0.2;
@@ -1101,10 +1104,7 @@ button:focus::-ms-button {
 
 .sort-order-ascending:hover::after,
 .sort-order-ascending:focus::after {
-  opacity: 1;
-  /*width: 0;
-  height: 0;
-
+  /*opacity: 1;
   border-color: #231f20;
   border-top-width: 0;
   border-left-color: transparent;
@@ -1114,9 +1114,6 @@ button:focus::-ms-button {
 
 
 .sort-order-ascending::before .sort-selected {
-  /*width: 0;
-  height: 0;
-
   border-color: #ee3643;
   border-top-width: 0;
   border-left-color: transparent;
