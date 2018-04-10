@@ -496,7 +496,7 @@ button:focus::-ms-button {
   background-color: #ffffff;
 }
 
-.login-link .logout-inner-inner {
+.login-link .logout-inner {
   position: relative;
   min-width: 299px;
   padding: 12px 47px 12px 46px;
@@ -518,7 +518,7 @@ button:focus::-ms-button {
   opacity: 0.3;
 }
 
-.login-link .login-inner::after {
+.login-link .logout-inner::after {
   content: "";
 
   position: absolute;
@@ -542,10 +542,10 @@ button:focus::-ms-button {
 
 .login-main:hover::before,
 .login-main:focus::before,
-.login-link .login-inner:hover::before,
-.login-link .login-inner:focus::before,
-.login-link .login-inner:hover::after,
-.login-link .login-inner:focus::after {
+.login-link .logout-inner:hover::before,
+.login-link .logout-inner:focus::before,
+.login-link .logout-inner:hover::after,
+.login-link .logout-inner:focus::after {
   opacity: 1;
 }
 
@@ -554,8 +554,8 @@ button:focus::-ms-button {
 }
 
 .login-main:active::before,
-.login-link .login-inner:active::before,
-.login-link .login-inner:active::after {
+.login-link .logout-inner:active::before,
+.login-link .logout-inner:active::after {
   opacity: 0.3;
 }
 
@@ -1019,25 +1019,25 @@ button:focus::-ms-button {
   list-style: none;
 }
 
-.sort-order a {
+.sort-order-button {
   /*display: block;
   width: 11px;
   height: 10px;*/
   opacity: 0.2;
 }
 
-.sort-order a:hover,
-.sort-order a:focus {
+.sort-order-button:hover,
+.sort-order-button:focus {
   opacity: 1;
 }
 
-.sort-order a:active path,
-.sort-order .sort-selected path {
-  fill: #EE3643;
+.sort-order-button:active path,
+.sort-order-button .sort-selected path {
+  fill: rgb(238, 54, 67);
 }
 
-.sort-order a:active,
-.sort-order .sort-selected {
+.sort-order-button:active,
+.sort-order-button .sort-selected {
   opacity: 1;
 }
 
