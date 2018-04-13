@@ -85,13 +85,23 @@
               <a href="#">Для стройки</a>
             </li></ul>
           <div class="categories-slider-wrapper">
+            <button class="slider-button slider-button-back" type="button">
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <button class="slider-button slider-button-next" type="button">
+              <span class="visually-hidden">Вперед</span>
+            </button>
+            <input class="slider-input-radio" type="radio"
+            id="product-1" name="toggle" checked>
+            <input class="slider-input-radio" type="radio"
+            id="product-2" name="toggle">
             <div class="slider-controls">
-              <label class="visually-hidden slider-arrow arrow-back" for="product-1">Первый</label>
-              <input class="visually-hidden slider-input-radio" type="radio"
-              id="product-1" name="toggle" checked>
-              <label class="visually-hidden slider-arrow arrow-next" for="product-2">Второй</label>
-              <input class="visually-hidden slider-input-radio" type="radio"
-              id="product-2" name="toggle">
+              <label class="slider-label-radio" for="product-1">
+                <span class="visually-hidden">Первый</span>
+              </label>
+              <label class="slider-label-radio" for="product-2">
+                <span class="visually-hidden">Второй</span>
+              </label>
             </div>
             <ul class="categories-sliders"><li class="slide perforators" id="perforators">
                 <div class="slide-content">

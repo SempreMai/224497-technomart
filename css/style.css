@@ -1041,94 +1041,6 @@ button:focus::-ms-button {
   opacity: 1;
 }
 
-/*.sort-order-descending::before {
-  content: "";
-
-  position: absolute;
-  left: 1px;
-  bottom: 8px;
-
-  width: 0;
-  height: 0;
-
-  /*width: 11px;
-  height: 10px;
-
-  background-image: url(../img/icon-up-dir.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  border: 6px solid rgba(35, 31, 32, 0.3);
-  border-top-width: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  transform: scaleY(1.7);
-  cursor: pointer;
-}
-
-.sort-order-descending:hover::before,
-.sort-order-descending:focus::before {
-  /*opacity: 1;
-  border-color: #231f20;
-  border-top-width: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  transform: scaleY(1.7);
-}
-
-
-.sort-order-ascending::after {
-  content: "";
-
-  position: absolute;
-  right: 4px;
-  bottom: 8px;
-
-  width: 0;
-  height: 0;
-
-  /*width: 11px;
-  height: 10px;
-
-  background-image: url(../img/icon-down-dir.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  opacity: 0.2;
-  border: 6px solid rgba(0, 0, 0, 0.3);
-  border-bottom-width: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  transform: scaleY(1.7);
-  cursor: pointer;
-}
-
-.sort-order-ascending:hover::after,
-.sort-order-ascending:focus::after {
-  /*opacity: 1;
-  border-color: #231f20;
-  border-top-width: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  transform: scaleY(1.7);
-}
-
-
-.sort-order-ascending::before .sort-selected {
-  border-color: #ee3643;
-  border-top-width: 0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  transform: scaleY(1.7);
-}
-
-.sort-order .sort-selected path {
-  fill: #ee3643;
-}
-
-.sort-order a {
-  color: rgba(0, 0, 0, 0.3);
-}*/
-
 
 /*Категории товаров*/
 
@@ -1213,9 +1125,6 @@ button:focus::-ms-button {
   background-image: url("../img/icon-materials.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /*z-index: 3;*/
-  /*background-color: red;*/
-  /*opacity: 0.3;*/
 }
 
 .tools {
@@ -1236,13 +1145,10 @@ button:focus::-ms-button {
   background-image: url("../img/icon-tools.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /*background-color: red;*/
-  /*opacity: 0.3;*/
 }
 
 .machinery {
   position: relative;
-  /*margin-bottom: 20px;*/
 
   background-color: #dc91d8;
 }
@@ -1259,8 +1165,6 @@ button:focus::-ms-button {
   background-image: url("../img/icon-machinery.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /*background-color: red;*/
-  /*opacity: 0.3;*/
 }
 
 .discount {
@@ -1338,7 +1242,7 @@ button:focus::-ms-button {
   background-position: 0 0;
 
   background-color: #cccccc;
-
+  overflow: hidden;
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
@@ -1352,16 +1256,8 @@ button:focus::-ms-button {
 .categories-slider-wrapper::before {
   content: "";
 
-  visibility: hidden;
-}
-
-.categories-slider-wrapper::before {
   background-image: url("../img/slider-drill.jpg");
 }
-
-/*.slide {
-  display: none;
-}*/
 
 .slide-content {
   display: flex;
@@ -1372,7 +1268,6 @@ button:focus::-ms-button {
   max-width: 280px;
   max-height: 266px;
   padding: 25px;
-  /*box-sizing: border-box;*/
 }
 
 .slide-content h3 {
@@ -1397,6 +1292,7 @@ button:focus::-ms-button {
   font-weight: 400;
   color: #ffffff;
 }
+
 .slide-content a {
   display: inline-block;
   box-sizing: border-box;
@@ -1409,96 +1305,81 @@ button:focus::-ms-button {
   border-radius: 3px;
 }
 
-/*.slider-controls {
-  z-index: 2;
 
-  font-size: 0;
-}
+.slider-button {
+  position: absolute;
+  top: 115px;
 
-.slider-arrow {
   display: block;
   width: 22px;
   height: 40px;
 
-  clip: rect(0, 0, 0, 0);
-  font-size: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-.slider-arrow::before {
-  position: absolute;
-  top: 45px;
+.slider-button-back {
+  content: "";
+
   left: 25px;
 
-  cursor: pointer;
+  background-image: url("../img/icon-left.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
- .slider-arrow::after {
-   position: absolute;
-   top: 45px;
-   right: 25px;
-
-   cursor: pointer;
-}
-
-#product-1::before {
+.slider-button-next {
   content: "";
 
+  right: 20px;
+
+  background-image: url("../img/icon-right.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.categories-slider-wrapper input[type=radio] {
+    display: none;
+}
+
+.slider-controls {
   position: absolute;
-  bottom: 35px;
   left: 295px;
+  bottom: 28px;
 
+  text-align: center;
+  /*width: 30px;
+  height: 12px;*/
+}
+
+.slider-controls label {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-
-  vertical-align: bottom;
-  background-color: #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#product-2::before {
-  content: "";
-
-  position: absolute;
-  bottom: 35px;
-  right: 295px;
-
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-
-  vertical-align: bottom;
-  background-color: #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#product-1:checked ~ .categories-slider-wrapper #perforators {
-  background-color: #cccccc;
-  background-image: url("../img/slider-perforator.jpg");
-}
-
-#product-2:checked ~ .categories-slider-wrapper #drills {
-  background-color: #cccccc;
-  background-image: url("../img/slider-drill.jpg");
-}
-
-
-#product-1:checked ~ .categories-slider-wrapper #perforators,
-#product-2:checked ~ .categories-slider-wrapper #drills {
-  display: block;
-}
-
-#product-1:checked ~ #product-1::before,
-#product-2:checked ~ #product-2::before {
   width: 6px;
   height: 6px;
-  background-color: #ee3643;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+  border: 2px solid white;
   border-radius: 50%;
-}*/
+  /*transition: background-color 0.2s;*/
+  cursor: pointer;
+}
+
+.slider-controls label:first-child {
+  margin-right: 6px;
+}
+
+#product-1:checked ~ .slider-controls label[for="product-1"],
+#product-2:checked ~ .slider-controls label[for="product-2"] {
+  background-color: #ee3643;
+}
+
 
 /*Популярные товары*/
+
 .inner-page-catalogue {
   display: flex;
   justify-content: space-between;
