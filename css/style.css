@@ -101,8 +101,30 @@ input[type="radio"].visually-hidden {
 }
 
 .main-logo {
+  box-sizing: border-box;
   width: 220px;
   height: 47px;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+  box-shadow: 0 -5px rgba(0, 0, 0, 0.24) inset;
+}
+
+.main-logo:hover,
+.main-logo:focus {
+  background-color: #ca2c37;
+}
+
+.main-logo:active {
+  background-color: #ba2732;
 }
 
 .user-navigation {
@@ -154,11 +176,6 @@ input[type="radio"].visually-hidden {
   height: 42px;
   padding-left: 49px;
 
-  /*font-family: "Cuprum", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  color: #ffffff;*/
-
   background-color: transparent;
   border: none;
   outline: none;
@@ -175,6 +192,10 @@ input::-moz-placeholder {
 input::-ms-input-placeholder {
   color: #fff;
   opacity: 1;
+}
+
+.search-window:hover {
+  background-color: #212a3a;
 }
 
 .search-window:focus {
