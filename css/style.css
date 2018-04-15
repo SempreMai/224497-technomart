@@ -1893,7 +1893,6 @@ input:focus::-ms-input-placeholder {
 
 .technomart-about h2 {
   margin: 0;
-  margin-bottom: 11px;
   padding: 0;
   text-transform: uppercase;
   letter-spacing: 0.9px;
@@ -1926,6 +1925,10 @@ input:focus::-ms-input-placeholder {
   align-items: flex-start;
 
   min-height: 370px;
+}
+
+.about-company h2 {
+  margin-bottom: 11px;
 }
 
 .delivery-companies {
@@ -2048,7 +2051,7 @@ input:focus::-ms-input-placeholder {
 .pagination-item-current:focus,
 .pagination-item-current:active {
   color: #ffffff;
-  
+
   border: none;
 }
 
