@@ -961,7 +961,7 @@ button:focus::-ms-button {
 .filter-input-radio + label:focus::before,
 .filter-input-radio:checked + label:hover::after,
 .filter-input-radio:checked + label:hover::after {
-  opacity: 0.9;
+  opacity: 0.3;
 }
 
 .filters button {
