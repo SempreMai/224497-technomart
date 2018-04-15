@@ -1567,7 +1567,7 @@ input:focus::-ms-input-placeholder {
   left: 0;
   width: 218px;
   height: 88px;
-  padding: 40px 0;
+  padding: 43px 0;
   background-color: rgba(255,255,255,0.9);
   z-index: 1;
 }
@@ -1588,8 +1588,8 @@ input:focus::-ms-input-placeholder {
   width: 135px;
   height: 38px;
   margin: 0 auto;
-  margin-bottom: 7px;
-  padding: 10px 0;
+  margin-bottom: 8px;
+  padding: 9px 0;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
