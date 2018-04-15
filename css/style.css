@@ -168,6 +168,12 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
+
+.user-search-form:hover {
+  background-color: #212a3a;
+  opacity: 1;
+}
+
 .search-window {
   position: relative;
   display: block;
@@ -194,9 +200,6 @@ input::-ms-input-placeholder {
   opacity: 1;
 }
 
-.search-window:hover {
-  background-color: #212a3a;
-}
 
 .search-window:focus {
   background-color: #ffffff;
@@ -219,8 +222,8 @@ input:focus::-ms-input-placeholder {
 
 .search-button {
   position: absolute;
-  top: 2px;
-  left: 1px;
+  top: 0px;
+  left: 0px;
   width: 50px;
   height: 42px;
   padding: 0;
