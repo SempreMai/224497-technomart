@@ -2004,11 +2004,6 @@ input:focus::-ms-input-placeholder {
   padding: 0px;
 
   list-style: none;
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  color: #000000;
-  text-transform: uppercase;
 }
 
 .pagination-item {
@@ -2017,6 +2012,12 @@ input:focus::-ms-input-placeholder {
 
   padding: 10px 14px 8px 15px;
   margin-right: 10px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
 
   text-align: center;
 
