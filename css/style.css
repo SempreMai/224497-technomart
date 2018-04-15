@@ -1996,7 +1996,7 @@ input:focus::-ms-input-placeholder {
   flex-wrap: wrap;
 
   margin: 0px;
-  margin-top: 30px; /*53 - 20 (нижний отступ карточки товара)*/
+  margin-top: 32px; /*53 - 20 (нижний отступ карточки товара)*/
   margin-bottom: 60px;
   padding: 0px;
 
@@ -2012,17 +2012,17 @@ input:focus::-ms-input-placeholder {
   display: block;
   box-sizing: border-box;
 
-  padding: 10px 15px 9px 15px;
+  padding: 10px 14px 8px 15px;
   margin-right: 10px;
 
   text-align: center;
 
-  border: 1px solid rgba(0, 0, 0, 0.4); /*не уверена в значении непрозрачности*/
+  border: 1px solid rgba(0, 0, 0, 0.1); /*не уверена в значении непрозрачности*/
   border-radius: 3px;
 }
 
 .pagination-item-current {
-  padding: 10px 15px 12px 16px;
+  padding: 10px 15px 10px 16px;
 
   color: #ffffff;
 
@@ -2031,16 +2031,25 @@ input:focus::-ms-input-placeholder {
 }
 
 .pagination-item-next {
-  padding: 9px 30px;
+  padding: 9px 32px 9px 30px;
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus {
-  border: 1px solid rgba(0, 0, 0, 0.6); /*не уверена в значении непрозрачности*/
+.pagination-item:hover,
+.pagination-item:focus {
+  border: 1px solid rgba(0, 0, 0, 0.2); /*не уверена в значении непрозрачности*/
 }
 
-.pagination-item a:active {
+.pagination-item:active {
+  color: inherit;
   border: 1px solid #ee3643;
+}
+
+.pagination-item-current:hover,
+.pagination-item-current:focus,
+.pagination-item-current:active {
+  color: #ffffff;
+  
+  border: none;
 }
 
 /*Внутренняя страница описание*/
