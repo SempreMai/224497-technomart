@@ -249,16 +249,6 @@ input:focus::-ms-input-placeholder {
   fill: #EE3643;
 }
 
-/*button:focus::-webkit-button {
-  opacity: 1;
-}
-button:focus::-moz-button {
-  opacity: 1;
-}
-button:focus::-ms-button {
-  opacity: 1;
-}*/
-
 .user-bookmarks {
   position: relative;
   padding-left: 45px;
@@ -274,7 +264,7 @@ button:focus::-ms-button {
 }
 
 .user-navigation .user-order {
-  padding-left: 20px;
+  padding-left: 21px;
   background-color: #63a63e;
 }
 
@@ -693,7 +683,7 @@ button:focus::-ms-button {
 
 /*Фильтры и сортировка*/
 .filters {
-  width: 220px;
+  min-width: 220px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -711,10 +701,6 @@ button:focus::-ms-button {
   height: 38px;
   margin-bottom: 10px;
 
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
   background-color: #f7f3ec;
   border-radius: 3px;
 }
@@ -722,14 +708,15 @@ button:focus::-ms-button {
 .filters-header h3 {
   margin: 0;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 19px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
 }
-
-
-.sort-selection h3 {
-  margin-right: 125px;
-}
-
 
 .filters fieldset {
   padding: 0;
@@ -996,13 +983,23 @@ button:focus::-ms-button {
   margin-bottom: 20px;
 }
 
+.sort-selection h3 {
+  margin-right: 138px;
+}
+
 .sort-by {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-width: 353px;
+  min-width: 355px;
   margin: 0px;
   padding: 0px;
+
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
 
   list-style: none;
 }
@@ -1036,16 +1033,13 @@ button:focus::-ms-button {
   justify-content: space-between;
   width: 43px;
   height: 10px;
-  margin: 0 17px 6px 45px;
+  margin: -8px 17px 6px 45px;
   padding: 0px;
 
   list-style: none;
 }
 
 .sort-order-button {
-  /*display: block;
-  width: 11px;
-  height: 10px;*/
   opacity: 0.2;
 }
 
