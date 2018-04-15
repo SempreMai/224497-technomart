@@ -1256,9 +1256,6 @@ input:focus::-ms-input-placeholder {
   position: relative;
   width: 620px;
   height: 266px;
-  background-image: url("../img/slider-perforator.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 
   background-color: #cccccc;
   overflow: hidden;
@@ -1272,10 +1269,28 @@ input:focus::-ms-input-placeholder {
   list-style: none;
 }
 
-.categories-slider-wrapper::before {
-  content: "";
+.categories-slide {
+  display: none;
+}
 
+.categories-slide:nth-child(1) {
+  background-image: url("../img/slider-perforator.jpg");
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+.categories-slide:nth-child(2) {
   background-image: url("../img/slider-drill.jpg");
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+#product-1:checked ~ .categories-sliders .categories-slide:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked ~ .categories-sliders .categories-slide:nth-child(2) {
+  display: block;
 }
 
 .slide-content {
