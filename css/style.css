@@ -34,7 +34,9 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -65,20 +67,23 @@ input[type="radio"].visually-hidden {
 .container {
   width: 940px;
   margin: 0 auto;
-  /*padding: 0px 10px;*/
 }
-
-.site-navigation-current a:not([href]){
-
-}
-
 
 /*Хедер*/
 .main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   margin-bottom: 60px;
 
@@ -89,20 +94,28 @@ input[type="radio"].visually-hidden {
 .header-top-wrapper {
   width: 100%;
   height: 42px;
-  /*margin-bottom: 46px;*/
 
   background-color: #32425c;
 }
 
 .header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .main-logo {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 220px;
   height: 47px;
   margin: 0;
@@ -116,7 +129,8 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 
   background-color: #ee3643;
-  box-shadow: 0 -5px rgba(0, 0, 0, 0.24) inset;
+  -webkit-box-shadow: 0 -5px rgba(0, 0, 0, 0.24) inset;
+          box-shadow: 0 -5px rgba(0, 0, 0, 0.24) inset;
 }
 
 .main-logo:hover,
@@ -129,8 +143,11 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 720px;
   margin: 0;
   padding: 0;
@@ -144,7 +161,8 @@ input[type="radio"].visually-hidden {
 
 .user-navigation a {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-height: 42px;
   padding-top: 12px;
 
@@ -179,7 +197,8 @@ input[type="radio"].visually-hidden {
 .search-window {
   position: relative;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 269px;
   height: 42px;
   padding-left: 49px;
@@ -325,19 +344,32 @@ input:focus::-ms-input-placeholder {
 /*Основная навигация по сайту*/
 
 .main-navigation {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   margin-bottom: 59px;
 
   background-color: #32425c;
-  box-shadow: inset 0 -5px #293449;
+  -webkit-box-shadow: inset 0 -5px #293449;
+          box-shadow: inset 0 -5px #293449;
 }
 
 .site-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   padding: 0;
   padding-left: 21px;
   margin: 0;
@@ -345,20 +377,21 @@ input:focus::-ms-input-placeholder {
   line-height: 17px;
   list-style: none;
 
-  box-shadow: inset 0 -5px #293449;
+  -webkit-box-shadow: inset 0 -5px #293449;
+
+          box-shadow: inset 0 -5px #293449;
 }
 
 .site-navigation a {
   display: block;
   padding: 20px 28px 23px 29px;
-  /*padding-top: 20px;
-  padding-bottom: 24px;*/
   margin: 0;
 
   text-align: center;
   color: #ffffff;
   background-color: #32425c;
-  box-shadow: inset 0 -5px #293449;
+  -webkit-box-shadow: inset 0 -5px #293449;
+          box-shadow: inset 0 -5px #293449;
 }
 
 .site-navigation a:hover,
@@ -379,10 +412,18 @@ input:focus::-ms-input-placeholder {
 /*Светлая часть хедера*/
 
 .header-bottom {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-top: 46px;
 
   font-size: 21px;
@@ -410,7 +451,8 @@ input:focus::-ms-input-placeholder {
 .header-phone a {
   position: relative;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 270px;
   height: 45px;
   padding: 9px 48px 12px 70px;
@@ -435,7 +477,6 @@ input:focus::-ms-input-placeholder {
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /*background-color: red;*/
 }
 
 .header-address {
@@ -454,10 +495,18 @@ input:focus::-ms-input-placeholder {
 
 .client-area ul {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   min-width: 121px;
 
   padding: 0;
@@ -468,7 +517,8 @@ input:focus::-ms-input-placeholder {
 
 .client-area a {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
 
   font-size: 21px;
@@ -497,7 +547,6 @@ input:focus::-ms-input-placeholder {
   background-image: url("../img/icon-login.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /*background-color: red;*/
   opacity: 0.3;
 }
 
@@ -528,7 +577,6 @@ input:focus::-ms-input-placeholder {
   background-image: url("../img/icon-user.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /*background-color: red;*/
   opacity: 0.3;
 }
 
@@ -590,9 +638,7 @@ input:focus::-ms-input-placeholder {
   text-decoration: underline;
   color: #32425c;
 
-  /*text-decoration: none;*/
   background-color: transparent;
-  /*border-bottom: 1px solid #32425c;*/
 }
 
 .client-area-option li:last-child {
@@ -632,9 +678,16 @@ input:focus::-ms-input-placeholder {
   top: -40px;
   margin: 0px;
   padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   min-width: 365px;
 
   list-style: none;
@@ -666,7 +719,9 @@ input:focus::-ms-input-placeholder {
   border: 1px solid #c1c6ce;
   border-left-color: transparent;
   border-bottom-color: transparent;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .breadcrumbs-main::before {
@@ -695,10 +750,19 @@ input:focus::-ms-input-placeholder {
 
 
 .filters-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 38px;
   margin-bottom: 10px;
 
@@ -778,7 +842,8 @@ input:focus::-ms-input-placeholder {
 
   border: 8px solid #ffffff;
   background-color: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+          box-shadow: 0 2px 1px 0 #cfcfcf;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -794,9 +859,18 @@ input:focus::-ms-input-placeholder {
 .filters-price-controls {
   position: relative;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   margin-bottom: 25px;
 }
@@ -824,19 +898,37 @@ input:focus::-ms-input-placeholder {
 }
 
 .catalogue-filters .filters-producers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 
   margin-top: 15px;
 }
 
 .catalogue-filters .filters-alimentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 
   margin-top: 19px;
   margin-bottom: 57px;
@@ -852,7 +944,10 @@ input:focus::-ms-input-placeholder {
   padding-left: 35px;
 
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 
   font-size: 15px;
   line-height: 20px;
@@ -878,8 +973,6 @@ input:focus::-ms-input-placeholder {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0.2;
-  /*border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 3px;*/
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -896,10 +989,6 @@ input:focus::-ms-input-placeholder {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0.2;
-  /*border: 4px solid rgba(0, 0, 0, 0.2);
-  border-top-color: transparent;
-  border-left-color: transparent;
-  transform: rotate(45deg);*/
 }
 
 .filter-input-radio + label::before {
@@ -916,8 +1005,6 @@ input:focus::-ms-input-placeholder {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0.2;
-  /*border: 4px solid rgba(0, 0, 0, 0.2);
-  border-radius: 50%;*/
 }
 
 .filter-input-radio:checked + label::before {
@@ -934,8 +1021,6 @@ input:focus::-ms-input-placeholder {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0.2;
-  /*background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;*/
 }
 
 /*Не могу разобраться с прозрачночтью*/
@@ -954,7 +1039,8 @@ input:focus::-ms-input-placeholder {
 
 .filters button {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 9px 39px;
 
   font-size: 13px;
@@ -979,8 +1065,12 @@ input:focus::-ms-input-placeholder {
 }
 
 .sort-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -989,9 +1079,16 @@ input:focus::-ms-input-placeholder {
 }
 
 .sort-by {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-width: 355px;
   margin: 0px;
   padding: 0px;
@@ -1028,10 +1125,18 @@ input:focus::-ms-input-placeholder {
 
 .sort-order {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 43px;
   height: 10px;
   margin: -8px 17px 6px 45px;
@@ -1065,23 +1170,41 @@ input:focus::-ms-input-placeholder {
 /*Категории товаров*/
 
 .main-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /*align-items: space-between;*/
-  align-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   min-height: 408px;
 
   margin-bottom: 53px;
 }
 
  .categories-list {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: flex-start;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+   -webkit-box-align: start;
+       -ms-flex-align: start;
+           align-items: flex-start;
    min-width: 940px;
 
    margin: 0;
@@ -1091,10 +1214,19 @@ input:focus::-ms-input-placeholder {
 }
 
 .category-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   max-height: 266px;
   margin: 0;
   padding: 0;
@@ -1102,16 +1234,24 @@ input:focus::-ms-input-placeholder {
 
 .category-item,
 .category-services-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-width: 300px;
   min-height: 123px;
   margin: 0;
   padding: 17px 130px 18px 24px;
-  /*margin-bottom: 20px;*/
 
   background-color: #ffbf47;
 }
@@ -1120,8 +1260,6 @@ input:focus::-ms-input-placeholder {
 .category-services-item h3 {
   margin: 0;
   padding: 0;
-  /*padding-left: 25px;*/
-  /*padding-right: 143px;*/
 
   font-size: 24px;
   line-height: 30px;
@@ -1260,6 +1398,8 @@ input:focus::-ms-input-placeholder {
 
   background-color: #cccccc;
   overflow: hidden;
+  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
+  -o-transition: background-image 0.5s ease, background-color 0.5s ease;
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
@@ -1277,13 +1417,13 @@ input:focus::-ms-input-placeholder {
 .categories-slide:nth-child(1) {
   background-image: url("../img/slider-perforator.jpg");
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 0 0;
 }
 
 .categories-slide:nth-child(2) {
   background-image: url("../img/slider-drill.jpg");
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 0 0;
 }
 
 #product-1:checked ~ .categories-sliders .categories-slide:nth-child(1) {
@@ -1295,11 +1435,20 @@ input:focus::-ms-input-placeholder {
 }
 
 .slide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: distribute;
+      align-content: flex-start;
   max-width: 280px;
   max-height: 266px;
   padding: 25px;
@@ -1330,9 +1479,10 @@ input:focus::-ms-input-placeholder {
 
 .slide-content a {
   display: inline-block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px;
-  max-width: 195px;
+  width: 195px;
 
   text-align: center;
   vertical-align: middle;
@@ -1385,8 +1535,6 @@ input:focus::-ms-input-placeholder {
   bottom: 28px;
 
   text-align: center;
-  /*width: 30px;
-  height: 12px;*/
 }
 
 .slider-controls label {
@@ -1399,7 +1547,6 @@ input:focus::-ms-input-placeholder {
   background-color: #ffffff;
   border: 2px solid white;
   border-radius: 50%;
-  /*transition: background-color 0.2s;*/
   cursor: pointer;
 }
 
@@ -1416,8 +1563,12 @@ input:focus::-ms-input-placeholder {
 /*Популярные товары*/
 
 .inner-page-catalogue {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 
@@ -1428,9 +1579,15 @@ input:focus::-ms-input-placeholder {
 
 /*Непосредственно каталог*/
 .catalogue-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 89px;
   padding-left: 28px;
   padding-right: 24px;
@@ -1441,7 +1598,6 @@ input:focus::-ms-input-placeholder {
 
 .catalogue-title h2 {
   display: inline-block;
-/*  align-self: flex-start;*/
   padding: 0px;
   margin: 0px;
 
@@ -1463,9 +1619,14 @@ input:focus::-ms-input-placeholder {
 }
 
 .catalogue-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0px;
   margin-top: 10px;
   padding: 0px;
@@ -1492,7 +1653,8 @@ input:focus::-ms-input-placeholder {
 
 .catalogue-item:hover,
 .catalogue-item:focus {
-  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+  -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .catalogue-item img {
@@ -1509,8 +1671,6 @@ input:focus::-ms-input-placeholder {
     width:60px;
     height:60px;
     background-color: red;
-    /*text-indent:-1000px;
-    overflow:hidden;*/
     z-index:2;
     background:url("../img/flag-new.png") no-repeat 0 0;
 }
@@ -1523,9 +1683,16 @@ input:focus::-ms-input-placeholder {
 }
 
 .catalogue-item-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 0;
   padding: 0;
   font-size: 17px;
@@ -1534,7 +1701,6 @@ input:focus::-ms-input-placeholder {
 
 .old-item-price {
   min-height: 20px;
-  /*margin-bottom: 10px;*/
   color: #a9a9a9;
   text-decoration: line-through;
 }
@@ -1585,7 +1751,8 @@ input:focus::-ms-input-placeholder {
 .item-pointed .buy,
 .item-pointed .to-bookmarks {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 135px;
   height: 38px;
   margin: 0 auto;
@@ -1606,15 +1773,15 @@ input:focus::-ms-input-placeholder {
 .item-pointed .buy {
   position: relative;
   background-color: #63a63e;
-  box-shadow: inset 0 -3px #367315;
-  /*background-image: linear-gradient(90deg, #19455a, #3c6579);*/
+  -webkit-box-shadow: inset 0 -3px #367315;
+          box-shadow: inset 0 -3px #367315;
 }
 
 .item-pointed .buy:hover,
 .item-pointed .buy:focus {
   background-color: #5fbb2d;
-  box-shadow: inset 0 -3px #367315;
-  /*background-image: linear-gradient(90deg, #19455a, #3c6579);*/
+  -webkit-box-shadow: inset 0 -3px #367315;
+          box-shadow: inset 0 -3px #367315;
 }
 
 .item-pointed .buy:active {
@@ -1670,9 +1837,14 @@ input:focus::-ms-input-placeholder {
 }
 
 .producers-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0px;
   padding: 0px;
 
@@ -1680,10 +1852,19 @@ input:focus::-ms-input-placeholder {
 }
 
 .producers-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 218px;
   height: 143px;
   margin-bottom: 20px;
@@ -1694,12 +1875,14 @@ input:focus::-ms-input-placeholder {
 
 .producers-list li:hover,
 .producers-list li:focus {
-  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+  -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .producers-list li:active {
   opacity: 0.3;
-  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+  -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 
@@ -1710,7 +1893,6 @@ input:focus::-ms-input-placeholder {
   padding-top: 70px;
 
   background-color: #f4f8fa;
-  /*border-top: 64px solid transparent;*/
 }
 
 .main-services-title {
@@ -1740,18 +1922,21 @@ input:focus::-ms-input-placeholder {
 }
 
 .services-slide-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .services-slide b {
   display: block;
   margin-bottom: 25px;
-  /*font-family: "PT Sans", Arial, sans-serif;*/
   text-transform: uppercase;
   font-size: 36px;
   line-height: 36px;
-  letter-spacing: 0.1px;
+  letter-spacing: -0.7px;
   color: #32425c;
 }
 
@@ -1790,7 +1975,8 @@ input:focus::-ms-input-placeholder {
 
 .services-button a {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-width: 240px;
   min-height: 61px;
   padding-top: 12px;
@@ -1828,10 +2014,6 @@ input:focus::-ms-input-placeholder {
   border-bottom: 1px solid #4d637b;
 }
 
-/*.services-button a:last-child {
-  height: 56px;
-}*/
-
 .services-list {
   margin: 0px;
   padding: 0px;
@@ -1846,7 +2028,6 @@ input:focus::-ms-input-placeholder {
 }
 
 .services-list .delivery-service {
-
   background-image: url("../img/services_delivery.png");
   min-height: 285px;
   background-position: right bottom;
@@ -1873,7 +2054,8 @@ input:focus::-ms-input-placeholder {
 
 .loan a {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 12px 10px 10px 10px;
   max-width: 195px;
 
@@ -1885,10 +2067,19 @@ input:focus::-ms-input-placeholder {
 
 /*Компания и Контакты*/
 .technomart-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 85px;
 }
 
@@ -1896,7 +2087,7 @@ input:focus::-ms-input-placeholder {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.8px;
 }
 
 .technomart-about p {
@@ -1907,11 +2098,13 @@ input:focus::-ms-input-placeholder {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
+  letter-spacing: 0.1px;
 }
 
 .technomart-about a {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 12px 10px 9px 10px;
 
   text-align: center;
@@ -1920,22 +2113,30 @@ input:focus::-ms-input-placeholder {
 }
 
 .about-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 
+  width: 520px;
   min-height: 370px;
 }
 
 .about-company h2 {
-  margin-bottom: 11px;
+  margin-bottom: 12px;
 }
 
 .delivery-companies {
   margin: 0;
-  margin-top: 5px;
-  /*margin-bottom: 38px;*/
   padding: 0;
 }
 
@@ -1961,20 +2162,37 @@ input:focus::-ms-input-placeholder {
 }
 
 .about-company .shopping {
-  margin-bottom: 5px;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.about-company .transport {
+  display: block;
+  width: 400px;
+  margin-bottom: 6px;
 }
 
 .about-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   min-height: 370px;
   max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .about-contacts .take-away {
-  /*margin-bottom: 30px;*/
+  display: block;
+  width: 200px;
 }
 
 .about-contacts .write-us-link {
@@ -1985,7 +2203,6 @@ input:focus::-ms-input-placeholder {
   margin: 0;
   padding: 0;
   background: none;
-  /*margin-bottom: 40px;*/
 }
 
 .delivery-companies {
@@ -1996,8 +2213,11 @@ input:focus::-ms-input-placeholder {
 
 /*Внутренняя страница пагинация*/
 .pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   margin: 0px;
   margin-top: 32px; /*53 - 20 (нижний отступ карточки товара)*/
@@ -2009,7 +2229,8 @@ input:focus::-ms-input-placeholder {
 
 .pagination-item {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   padding: 10px 14px 8px 15px;
   margin-right: 10px;
@@ -2060,12 +2281,12 @@ input:focus::-ms-input-placeholder {
 /*Внутренняя страница описание*/
 .catalogue-item-description {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-height: 261px;
   padding-top: 68px;
   background-color: #f2f6f8;
   color: #000000;
-  /*border-top: 64px solid transparent;*/
 }
 
 .item-description-wrapper h2 {
@@ -2082,6 +2303,7 @@ input:focus::-ms-input-placeholder {
 .catalogue-item-description p {
   display: block;
   margin: 0;
+  letter-spacing: 0.1px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -2106,20 +2328,29 @@ input:focus::-ms-input-placeholder {
 }
 
 .bottom-navigation-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: flex-start;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-height: 192px;
 }
 
 .footer-logo {
   width: 220px;
   height: 68px;
-  /*margin-right: 152px;*/
-  /*margin-bottom: 30px;*/
 }
 
 .site-navigation-top {
@@ -2155,7 +2386,8 @@ input:focus::-ms-input-placeholder {
 }
 
 .bottom-address {
-  display: inline-block;
+  display: block;
+  width: 330px;
   margin: 0px;
   margin-right: 12px;
   padding: 0px;
@@ -2173,7 +2405,6 @@ input:focus::-ms-input-placeholder {
 
 .site-navigation-bottom li {
   display: inline-block;
-  /*height: 70px;*/
   margin-right: 55px;
 }
 
@@ -2207,31 +2438,53 @@ input:focus::-ms-input-placeholder {
 }
 
 .technomart-details p {
-  /*display: inline-block;*/
+  display: block;
   margin: 0px;
   padding: 0px;
+
+  letter-spacing: 0.1px;
 }
 
 .technomart-details-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   min-height: 105px;
   padding-top: 3px;
 }
 
 .technomart-details .footer-copyright {
-  margin-right: 170px;
+
+  width: 235px;
+  margin-right: 155px;
 }
 
 .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-width: 129px;
   padding-top: 5px;
   margin-right: 121px;
@@ -2242,7 +2495,6 @@ input:focus::-ms-input-placeholder {
   display: inline-block;
   width: 40px;
   height: 40px;
-  /*margin-right: 3px;*/
   background-color: #212a3a;
   border-radius: 50%;
 }
@@ -2265,7 +2517,7 @@ input:focus::-ms-input-placeholder {
   left: 8px;
   width: 26px;
   height: 15px;
-  /*background-color: red;*/
+
   background-image: url("../img/vk-icon.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -2276,10 +2528,10 @@ input:focus::-ms-input-placeholder {
 
   position: absolute;
   top: 9px;
-  left: 10px;
+  left: 11px;
   width: 21px;
   height: 21px;
-  /*background-color: red;*/
+
   background-image: url("../img/fb-icon.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -2293,7 +2545,7 @@ input:focus::-ms-input-placeholder {
   left: 11px;
   width: 21px;
   height: 21px;
-  /*background-color: red;*/
+
   background-image: url("../img/insta-icon.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -2315,7 +2567,12 @@ input:focus::-ms-input-placeholder {
 }
 
 .technomart-details .footer-feedback {
-  margin-right: 50px;
+  width: 130px;
+  margin-right: 60px;
+}
+
+.footer-made-by {
+  width: 100px;
 }
 
 /*Модальные блоки*/
@@ -2335,11 +2592,13 @@ input:focus::-ms-input-placeholder {
   position: fixed;
 
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   color: #000000;
   background-color: #ffffff;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+          box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   z-index: 3;
 }
 
@@ -2358,7 +2617,6 @@ input:focus::-ms-input-placeholder {
 
   cursor: pointer;
   outline: none;
-  /*z-index: 4;*/
 }
 
 .modal-close::before,
@@ -2376,11 +2634,15 @@ input:focus::-ms-input-placeholder {
 }
 
 .modal-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .modal-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 /*Техномарт на карте*/
@@ -2419,11 +2681,19 @@ input:focus::-ms-input-placeholder {
 }
 
 .write-us-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .write-us-part-name {
@@ -2436,7 +2706,8 @@ input:focus::-ms-input-placeholder {
 
 .modal-write-us input {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   width: 220px;
   height: 38px;
@@ -2454,7 +2725,8 @@ input:focus::-ms-input-placeholder {
 
 .modal-write-us textarea {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 460px;
   height: 114px;
   padding-top: 10px;
@@ -2472,7 +2744,8 @@ input:focus::-ms-input-placeholder {
 
 .write-us-part-send {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 620px;
   height: 112px;
   padding-top: 37px;
@@ -2530,10 +2803,19 @@ input:focus::-ms-input-placeholder {
 }
 
 .catalogue-purchase {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 112px;
 
   list-style: none;
@@ -2542,7 +2824,8 @@ input:focus::-ms-input-placeholder {
 
 .catalogue-purchase a {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 220px;
   height: 38px;
   padding-top: 10px;
@@ -2569,5 +2852,4 @@ input:focus::-ms-input-placeholder {
   text-transform: uppercase;
 
   background-color: #ffffff;
-
 }
