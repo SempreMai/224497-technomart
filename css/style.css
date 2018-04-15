@@ -156,6 +156,7 @@ input[type="radio"].visually-hidden {
 
 .user-navigation a:active {
   opacity: 0.3;
+  background-color: #212a3a;
 }
 
 .quantity {
