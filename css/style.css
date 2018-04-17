@@ -877,6 +877,7 @@ input:focus::-ms-input-placeholder {
 
 .filters-price-controls input {
   display: inline-block;
+  vertical-align: middle;
   width: 95px;
   padding: 9px 0;
   background-color: #f7f3ec;
@@ -1104,6 +1105,8 @@ input:focus::-ms-input-placeholder {
 
 .sort-by li {
   display: inline-block;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .sort-by a {
@@ -1478,7 +1481,6 @@ input:focus::-ms-input-placeholder {
 }
 
 .slide-content a {
-  display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
@@ -1539,6 +1541,8 @@ input:focus::-ms-input-placeholder {
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: middle;
+
   width: 6px;
   height: 6px;
   margin: 0;
@@ -1597,7 +1601,7 @@ input:focus::-ms-input-placeholder {
 }
 
 .catalogue-title h2 {
-  display: inline-block;
+  display: block;
   padding: 0px;
   margin: 0px;
 
@@ -1637,6 +1641,7 @@ input:focus::-ms-input-placeholder {
 .catalogue-item {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 218px;
   height: 316px;
   margin-bottom: 20px;
@@ -1834,6 +1839,12 @@ input:focus::-ms-input-placeholder {
 /*Популярные производители*/
 .producers {
   margin-bottom: 65px;/*85 - 20 нижний отступ каталога производителей*/
+}
+
+.producers h2 {
+  -webkit-transform: translateX(-4px) translateY(2px);
+      -ms-transform: translateX(-4px) translateY(2px);
+          transform: translateX(-4px) translateY(2px);
 }
 
 .producers-list {
@@ -2361,6 +2372,7 @@ input:focus::-ms-input-placeholder {
 
 .site-navigation-top li {
   display: inline-block;
+  vertical-align: middle;
   height: 55px;
   margin-top: 38px;
   margin-right: 55px;
@@ -2405,6 +2417,7 @@ input:focus::-ms-input-placeholder {
 
 .site-navigation-bottom li {
   display: inline-block;
+  vertical-align: middle;
   margin-right: 55px;
 }
 
@@ -2493,6 +2506,7 @@ input:focus::-ms-input-placeholder {
 .social-button {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 40px;
   height: 40px;
   background-color: #212a3a;
@@ -2591,7 +2605,6 @@ input:focus::-ms-input-placeholder {
 .modal {
   position: fixed;
 
-  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
@@ -2600,6 +2613,10 @@ input:focus::-ms-input-placeholder {
   -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
           box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   z-index: 3;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal-close {
