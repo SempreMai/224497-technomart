@@ -886,6 +886,10 @@ input:focus::-ms-input-placeholder {
   text-align: center;
 }
 
+_:-ms-fullscreen, :root .min-price-for-ie{
+  margin-right: 30px;
+}
+
 .filters-price-controls::after {
   content: "";
 
@@ -1233,6 +1237,10 @@ input:focus::-ms-input-placeholder {
   max-height: 266px;
   margin: 0;
   padding: 0;
+}
+
+_:-ms-fullscreen, :root .categories-for-ie {
+  margin-bottom: 20px;
 }
 
 .category-item,
@@ -2143,7 +2151,12 @@ input:focus::-ms-input-placeholder {
 }
 
 .about-company h2 {
+  display: block;
   margin-bottom: 12px;
+}
+
+_:-ms-fullscreen, :root .shopping-for-ie {
+  width: 520px;
 }
 
 .delivery-companies {
@@ -2348,7 +2361,7 @@ input:focus::-ms-input-placeholder {
           flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -2362,6 +2375,7 @@ input:focus::-ms-input-placeholder {
 .footer-logo {
   width: 220px;
   height: 68px;
+  margin-right: 169px;
 }
 
 .site-navigation-top {
@@ -2401,7 +2415,7 @@ input:focus::-ms-input-placeholder {
   display: block;
   width: 330px;
   margin: 0px;
-  margin-right: 12px;
+  margin-right: 83px;
   padding: 0px;
   letter-spacing: 0.1px;
 }
@@ -2448,6 +2462,10 @@ input:focus::-ms-input-placeholder {
   color: #ffffff;
 
   background-color: #293449;
+}
+
+_:-ms-fullscreen, :root .technomart-details-for-ie {
+  padding-top: 35px;
 }
 
 .technomart-details p {
