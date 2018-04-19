@@ -1253,7 +1253,7 @@ _:-ms-fullscreen, :root .categories-for-ie {
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+      justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1262,7 +1262,7 @@ _:-ms-fullscreen, :root .categories-for-ie {
   min-width: 300px;
   min-height: 123px;
   margin: 0;
-  padding: 17px 130px 18px 24px;
+  padding: 20px 130px 18px 23px;
 
   background-color: #ffbf47;
 }
@@ -1270,6 +1270,7 @@ _:-ms-fullscreen, :root .categories-for-ie {
 .category-item h3,
 .category-services-item h3 {
   margin: 0;
+  margin-bottom: 14px;
   padding: 0;
 
   font-size: 24px;

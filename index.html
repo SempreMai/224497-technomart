@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -375,12 +375,12 @@
         <h3 class="visually-hidden">Напишите нам</h3>
         <p class="write-us-part-name">
           <label for="write-us-name">Ваше имя:</label>
-          <input id="write-us-name" type="text" name="your-name" value=""
+          <input id="write-us-name" type="text" name="your_name" value=""
            placeholder="Представьтесь, пожалуйста">
         </p>
         <p class="write-us-part-email">
           <label for="write-us-email">Ваш e-mail:</label>
-          <input id="write-us-email" type="text" name="your-email" value=""
+          <input id="write-us-email" type="text" name="your_email" value=""
           placeholder="Для отправки ответа" required>
         </p>
         <p class="write-us-part-text">
@@ -406,19 +406,37 @@
     <script>
     var writeUs = document.querySelector(".write-us-link");
 
-    var formWrite = document.querySelector(".modal-write-us");
+    var modalWrite = document.querySelector(".modal-write-us");
 
-    var close = formWrite.querySelector(".modal-close");
+    var close = document.querySelector(".modal-close");
 
-    writeUs.addEventListener("click", function(evt) {
+    var formWrite = document.querySelector(".write-us-form");
+
+    writeUs.addEventListener("click", function (evt) {
+
+	     evt.preventDefault();
+
+       modalWrite.classList.add("modal-show");
+    });
+
+    close.addEventListener("click", function (evt) {
+
+      evt.preventDefault();
+
+      modalWrite.classList.remove("modal-show");
+    });
+
+    formWrite.addEventListener("submit", function (evt) {
+
+      if (!your_name.value || !your_email.value) {
         evt.preventDefault();
-        formWrite.classList.add("modal-show");
-      });
-    close.addEventListener("click", function (evt)
-      {
-        evt.preventDefault();
-        formWrite.classList.remove("modal-show");
-      });
+        console.log("Нужно ввести имя и адрес");
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem("your_name", your_name.value);
+        }
+      }
+    });
     </script>
   </body>
 </html>
