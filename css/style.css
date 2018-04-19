@@ -2627,6 +2627,12 @@ _:-ms-fullscreen, :root .technomart-details-for-ie {
   background-position: 0 0;
 }
 
+.modal-map-popup iframe {
+  width:940px;
+  height: 446px;
+  border: 0;
+}
+
 /*Напишите нам*/
 
 .modal-write-us {
