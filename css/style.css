@@ -208,15 +208,15 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
-input::-webkit-input-placeholder {
+.user-search-form input::-webkit-input-placeholder {
   color: #fff;
   opacity: 1;
 }
-input::-moz-placeholder {
+.user-search-form input::-moz-placeholder {
   color: #fff;
   opacity: 1;
 }
-input::-ms-input-placeholder {
+.user-search-form input::-ms-input-placeholder {
   color: #fff;
   opacity: 1;
 }
@@ -228,15 +228,15 @@ input::-ms-input-placeholder {
 }
 
 
-input:focus::-webkit-input-placeholder {
+.user-search-form input:focus::-webkit-input-placeholder {
   color: #000000;
   opacity: 1;
 }
-input:focus::-moz-placeholder {
+.user-search-form input:focus::-moz-placeholder {
   color: #000000;
   opacity: 1;
 }
-input:focus::-ms-input-placeholder {
+.user-search-form input:focus::-ms-input-placeholder {
   color: #000000;
   opacity: 1;
 }
@@ -2610,77 +2610,6 @@ _:-ms-fullscreen, :root .technomart-details-for-ie {
 }
 
 /*Модальные блоки*/
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 2;
-}
-
-.modal {
-  position: fixed;
-
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-
-  color: #000000;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
-          box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
-  z-index: 3;
-}
-
-.modal-show {
-  display: block;
-}
-
-.modal-close {
-  position: absolute;
-  top: 9px;
-  right: 7px;
-
-  font-size: 0;
-
-  width: 21px;
-  height: 21px;
-
-  background-color: transparent;
-  border: 0;
-
-  cursor: pointer;
-  outline: none;
-}
-
-.modal-close::before,
-.modal-close::after {
-  content: "";
-
-  position: absolute;
-  top: 9px;
-  left: -3px;
-
-  width: 28px;
-  height: 4px;
-
-  background-color: #ee3643;
-}
-
-.modal-close::before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.modal-close::after {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
 
 /*Техномарт на карте*/
 
@@ -2750,14 +2679,23 @@ _:-ms-fullscreen, :root .technomart-details-for-ie {
   height: 38px;
   padding-left: 15px;
 
-  font: inherit;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #a9a9a9;
 
   background-color: transparent;
   border: 2px solid #dee3e4;
   border-radius: 3px;
+}
+
+.modal-write-us input::-webkit-input-placeholder {
+  color: #a9a;
+}
+.modal-write-us input::-moz-placeholder {
+  color: #a9a;
+}
+.modal-write-us input::-ms-input-placeholder {
+  color: #a9a;
 }
 
 .modal-write-us textarea {
@@ -2769,13 +2707,23 @@ _:-ms-fullscreen, :root .technomart-details-for-ie {
   padding-top: 10px;
   padding-left: 15px;
 
-  font: inherit;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 
   resize: none;
   background-color: transparent;
   border: 2px solid #dee3e4;
+}
+
+.modal-write-us textarea::-webkit-input-placeholder {
+  color: #a9a;
+}
+.modal-write-us textarea::-moz-placeholder {
+  color: #a9a;
+}
+.modal-write-us textarea::-ms-input-placeholder {
+  color: #a9a;
 }
 
 
