@@ -2615,12 +2615,13 @@ _:-ms-fullscreen, :root .technomart-details-for-ie {
 
 .modal-map-popup {
   display: none;
-  bottom: 355px;
+  top: 50%;
   left: 50%;
 
   width: 940px;
   height: 446px;
   margin-left: -470px;
+  margin-top: -223px;
 
   background-image: url("../img/map-popup.jpg");
   background-repeat: no-repeat;
@@ -2637,13 +2638,14 @@ _:-ms-fullscreen, :root .technomart-details-for-ie {
 
 .modal-write-us {
   display: none;
-  bottom: 200px;
+  top: 50%;
   left: 50%;
 
   width: 620px;
   height: 430px;
   padding-top: 45px;
   margin-left: -310px;
+  margin-top: -215px;
 
   font-size: 18px;
   line-height: 18px;
@@ -2871,8 +2873,111 @@ _:-ms-fullscreen, :root .technomart-details-for-ie {
   z-index: 3;
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(10px;);
+            transform: translateY(10px;);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(10px;);
+            transform: translateY(10px;);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
 .modal-show {
   display: block;
+
+  -webkit-animation: bounce 0.6s;
+
+          animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .modal-close {
