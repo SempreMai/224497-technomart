@@ -12,11 +12,19 @@ var mapPopup = document.querySelector(".modal-map-popup");
 
 var mapClose = document.querySelector(".map-close");
 
+var nameWrite = formWrite.querySelector("[name = your_name]");
+
+var emailWrite = formWrite.querySelector("[name = your_email]");
+
+var fillForm = formWrite.querySelector("form");
+
 writeUs.addEventListener("click", function (evt) {
 
    evt.preventDefault();
 
    modalWrite.classList.add("modal-show");
+
+   nameWrite.focus();
 });
 
 closeWriteUs.addEventListener("click", function (evt) {
@@ -26,14 +34,18 @@ closeWriteUs.addEventListener("click", function (evt) {
   modalWrite.classList.remove("modal-show");
 });
 
-formWrite.addEventListener("submit", function (evt) {
+fillForm.addEventListener("submit", function (evt) {
 
-  if (!your_name.value || !your_email.value) {
+  if (!nameWrite.value || !emailWrite.value) {
+
     evt.preventDefault();
+
     console.log("Нужно ввести имя и адрес");
+
   } else {
+
     if (isStorageSupport) {
-      localStorage.setItem("your_name", your_name.value);
+      localStorage.setItem("your_email", emailWrite.value);
     }
   }
 });
